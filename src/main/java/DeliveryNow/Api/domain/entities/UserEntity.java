@@ -18,6 +18,13 @@ public class UserEntity {
         this.lastName = lastName;
         this.password = password;
     }
+    public UserEntity( String email, String firstName, String lastName, String password) {
+
+        this.email = email;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.password = password;
+    }
 
     public Long getId() {
         return id;
