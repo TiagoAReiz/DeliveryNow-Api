@@ -1,6 +1,7 @@
 package DeliveryNow.Api.infrastructure.config.jwt;
 
 import DeliveryNow.Api.domain.entities.UserEntity;
+import DeliveryNow.Api.infrastructure.adapters.out.repositories.userEntity.JpaUserEntity;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTCreationException;
@@ -17,7 +18,7 @@ public class TokenService {
     @Value("${app.secret.key}")
     private String secretKey;
 
-    public String generateToken(UserEntity userEntity) {
+    public String generateToken(JpaUserEntity userEntity) {
         try{
             Algorithm algorithm = Algorithm.HMAC256(secretKey);
             return JWT.create()
