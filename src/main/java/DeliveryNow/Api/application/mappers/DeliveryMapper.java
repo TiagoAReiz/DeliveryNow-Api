@@ -14,12 +14,12 @@ public class DeliveryMapper {
 
     }
     public static Delivery toEntity(DeliveryRequest delivery){
-        return new Delivery(delivery.name(), delivery.address(), delivery.status());
+        return new Delivery(delivery.name(), delivery.address(), delivery.status(), delivery.userId());
     }
     public static JpaDelivery toJpa(Delivery delivery){
-        return new JpaDelivery(delivery.getId(), delivery.getName(), delivery.getAddress(), delivery.getStatus());
+        return new JpaDelivery(delivery.getId(), delivery.getName(), delivery.getAddress(), delivery.getStatus(), delivery.getUserId());
     }
     public static Delivery toEntity(JpaDelivery delivery){
-        return new Delivery(delivery.getId(), delivery.getName(), delivery.getAddress(), delivery.getStatus());
+        return new Delivery(delivery.getId(), delivery.getName(), delivery.getAddress(), delivery.getStatus(), delivery.getId());
     }
 }

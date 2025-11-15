@@ -18,7 +18,7 @@ public class UserEntityController {
     public UserEntityController(UserEntityUseCases userEntityUseCases) {
         this.userEntityUseCases = userEntityUseCases;
     }
-    @PostMapping
+    @PostMapping("/register")
     public ResponseEntity<UserEntityResponse> createUser(@RequestBody UserEntityRequest user) {
         return ResponseEntity.ok(userEntityUseCases.createUser(user));
     }

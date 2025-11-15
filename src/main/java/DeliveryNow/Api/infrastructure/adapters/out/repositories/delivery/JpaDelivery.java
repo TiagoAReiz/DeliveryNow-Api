@@ -18,4 +18,5 @@ public class JpaDelivery {
     private String name;
     private String address;
     private DeliveryStatus status;
+    private Long user_id;
 }

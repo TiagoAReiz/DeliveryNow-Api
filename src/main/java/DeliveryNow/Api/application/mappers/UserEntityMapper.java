@@ -18,4 +18,8 @@ public class UserEntityMapper {
     public static JpaUserEntity toJpaUserEntity(UserEntity userEntity) {
         return new JpaUserEntity(userEntity.getId(), userEntity.getEmail(),userEntity.getFirstName(), userEntity.getLastName(), userEntity.getPassword());
     }
+    public static UserEntity toUserEntity(JpaUserEntity userEntityRequest) {
+        return new UserEntity(userEntityRequest.getId(), userEntityRequest.getEmail(), userEntityRequest.getFirstName(),userEntityRequest.getLastName(), userEntityRequest.getPassword());
+
+    }
 }
