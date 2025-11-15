@@ -39,15 +39,22 @@ public class DeliveryRepositoryImpl implements DeliveryRepository {
 
     @Override
     public List<Delivery> search(SearchRequest searchRequest) {
-        return jpaDeliveryRepository.search(searchRequest).stream().map(DeliveryMapper::toEntity).toList();
+        String status = searchRequest.search();
+        return jpaDeliveryRepository.search(searchRequest.search(), status, searchRequest.userId()).stream().map(DeliveryMapper::toEntity).toList();
     }
 
     @Override
     public Delivery updateDelivery(Long id, DeliveryRequest deliveryRequest) {
         JpaDelivery delivery = jpaDeliveryRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("Delivery not found with id " + id));
-        delivery.setName(deliveryRequest.name());
-        delivery.setAddress(deliveryRequest.address());
-        delivery.setStatus(deliveryRequest.status());
+        if (deliveryRequest.name() != null) {
+            delivery.setName(deliveryRequest.name());
+        }
+        if(deliveryRequest.address() != null) {
+            delivery.setAddress(deliveryRequest.address());
+        }
+        if(deliveryRequest.status() != null) {
+            delivery.setStatus(deliveryRequest.status());
+        }
         jpaDeliveryRepository.save(delivery);
         return DeliveryMapper.toEntity(delivery);
     }

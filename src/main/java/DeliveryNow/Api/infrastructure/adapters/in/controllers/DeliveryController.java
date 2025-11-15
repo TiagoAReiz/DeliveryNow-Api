@@ -36,15 +36,16 @@ public class DeliveryController {
     @GetMapping("/search")
     public ResponseEntity<List<DeliveryResponse>> getAllDeliveriesByStatusNameOrAddress(
             @RequestParam(required = false) String search,
-            @RequestParam(required = false) DeliveryStatus status) {
-        return ResponseEntity.ok(deliveryUseCases.search(new SearchRequest(search, status)));
+            @RequestParam(required = false) DeliveryStatus status,
+            @RequestParam(required = true)Long userId ){
+        return ResponseEntity.ok(deliveryUseCases.search(new SearchRequest(search, status,userId)));
     }
     @PostMapping
     public ResponseEntity<Void> createDelivery(@RequestBody DeliveryRequest deliveryRequest) {
         deliveryUseCases.createDelivery(deliveryRequest);
         return ResponseEntity.ok().build();
     }
-    @PutMapping("/{id}")
+    @PatchMapping("/{id}")
     public ResponseEntity<DeliveryResponse> UpdateDelivery(@PathVariable Long id, @RequestBody DeliveryRequest deliveryRequest) {
         try {
             DeliveryResponse response = deliveryUseCases.updateDelivery(id, deliveryRequest);
