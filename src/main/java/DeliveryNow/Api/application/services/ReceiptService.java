@@ -40,9 +40,7 @@ public class ReceiptService implements ReceiptUseCases {
             receipt.setImageUrl(url);
 
         }
-        List<ReceiptResponse> receiptss = receipts.stream().map(ReceiptMapper::toResponse).toList();
-        System.out.println(receiptss);
-        return receiptss;
+        return receipts.stream().map(ReceiptMapper::toResponse).toList();
     }
 
     public void deleteReceipt(Long receiptId){
