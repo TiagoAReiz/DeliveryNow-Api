@@ -4,6 +4,7 @@ import DeliveryNow.Api.application.mappers.DeliveryMapper;
 import DeliveryNow.Api.application.services.dtos.DeliveryRequest;
 import DeliveryNow.Api.application.services.dtos.SearchRequest;
 import DeliveryNow.Api.domain.entities.Delivery;
+import DeliveryNow.Api.domain.entities.enums.DeliveryStatus;
 import DeliveryNow.Api.domain.interfaces.DeliveryRepository;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.stereotype.Service;
@@ -39,7 +40,10 @@ public class DeliveryRepositoryImpl implements DeliveryRepository {
 
     @Override
     public List<Delivery> search(SearchRequest searchRequest) {
-        String status = searchRequest.search();
+        Integer status = null;
+        if (searchRequest.status()!= null){
+            status = searchRequest.status().ordinal();
+        }
         return jpaDeliveryRepository.search(searchRequest.search(), status, searchRequest.userId()).stream().map(DeliveryMapper::toEntity).toList();
     }
 

@@ -14,12 +14,12 @@ SELECT *
 FROM deliveries
 WHERE user_id = :userId AND
       (:search IS NULL OR name LIKE CONCAT('%', :search, '%') OR address LIKE CONCAT('%', :search, '%'))
-  AND (:deliveryStatus IS NULL OR status = CAST(:deliveryStatus AS SMALLINT))
+  AND (:deliveryStatus IS NULL OR status = :deliveryStatus)
   
 """, nativeQuery = true)
     List<JpaDelivery> search(
             @Param("search") String search,
-            @Param("deliveryStatus") String deliveryStatus,
+            @Param("deliveryStatus") Integer deliveryStatus,
             @Param("userId") Long userId
     );
 

@@ -19,8 +19,8 @@ public class ReceiptController {
         this.receiptUseCases = receiptUseCases;
     }
 
-    @PostMapping("/send")
-    public ResponseEntity<Void> createReceipt(@RequestParam MultipartFile image, @RequestParam Long deliveryId) {
+    @PostMapping("/send/{deliveryId}")
+    public ResponseEntity<Void> createReceipt(@RequestParam MultipartFile image, @PathVariable Long deliveryId) {
         ReceiptCreateRequest receipt = new ReceiptCreateRequest(image, deliveryId);
         receiptUseCases.create(receipt);
         return ResponseEntity.ok().build();
