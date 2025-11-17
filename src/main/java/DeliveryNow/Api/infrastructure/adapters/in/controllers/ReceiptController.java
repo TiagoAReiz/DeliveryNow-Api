@@ -4,6 +4,7 @@ import DeliveryNow.Api.application.services.dtos.DeliveryRequest;
 import DeliveryNow.Api.application.services.dtos.ReceiptCreateRequest;
 import DeliveryNow.Api.application.services.dtos.ReceiptResponse;
 import DeliveryNow.Api.application.useCases.ReceiptUseCases;
+import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;

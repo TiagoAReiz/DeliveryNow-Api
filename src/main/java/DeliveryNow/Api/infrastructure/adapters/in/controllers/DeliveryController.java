@@ -6,6 +6,7 @@ import DeliveryNow.Api.application.services.dtos.SearchRequest;
 import DeliveryNow.Api.application.useCases.DeliveryUseCases;
 import DeliveryNow.Api.domain.entities.enums.DeliveryStatus;
 import jakarta.persistence.EntityNotFoundException;
+import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,7 +26,7 @@ public class DeliveryController {
         return ResponseEntity.ok(deliveryUseCases.getAllDeliveries());
     }
     @GetMapping("/{id}")
-    public ResponseEntity<DeliveryResponse> getDelivery(@PathVariable Long id) {
+    public ResponseEntity<DeliveryResponse> getDelivery(@Valid @PathVariable Long id) {
         try {
             DeliveryResponse response = deliveryUseCases.getDeliveryById(id);
             return ResponseEntity.ok(response);
@@ -41,12 +42,12 @@ public class DeliveryController {
         return ResponseEntity.ok(deliveryUseCases.search(new SearchRequest(search, status,userId)));
     }
     @PostMapping
-    public ResponseEntity<Void> createDelivery(@RequestBody DeliveryRequest deliveryRequest) {
+    public ResponseEntity<Void> createDelivery(@Valid @RequestBody DeliveryRequest deliveryRequest) {
         deliveryUseCases.createDelivery(deliveryRequest);
         return ResponseEntity.ok().build();
     }
     @PatchMapping("/{id}")
-    public ResponseEntity<DeliveryResponse> UpdateDelivery(@PathVariable Long id, @RequestBody DeliveryRequest deliveryRequest) {
+    public ResponseEntity<DeliveryResponse> UpdateDelivery( @Valid @PathVariable Long id, @RequestBody DeliveryRequest deliveryRequest) {
         try {
             DeliveryResponse response = deliveryUseCases.updateDelivery(id, deliveryRequest);
             return ResponseEntity.ok(response);

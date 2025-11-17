@@ -16,10 +16,10 @@ public class UserEntityMapper {
         return new UserEntityResponse(userEntity.getEmail(),userEntity.getFirstName(), userEntity.getLastName());
     }
     public static JpaUserEntity toJpaUserEntity(UserEntity userEntity) {
-        return new JpaUserEntity(userEntity.getId(), userEntity.getEmail(),userEntity.getFirstName(), userEntity.getLastName(), userEntity.getPassword());
+        return new JpaUserEntity(userEntity.getId(), userEntity.getEmail(),userEntity.getFirstName(), userEntity.getLastName(), userEntity.getPassword(),userEntity.getCreatedAt(),userEntity.getUpdatedAt(),userEntity.getDeletedAt());
     }
     public static UserEntity toUserEntity(JpaUserEntity userEntityRequest) {
-        return new UserEntity(userEntityRequest.getId(), userEntityRequest.getEmail(), userEntityRequest.getFirstName(),userEntityRequest.getLastName(), userEntityRequest.getPassword());
+        return new UserEntity(userEntityRequest.getId(), userEntityRequest.getEmail(), userEntityRequest.getFirstName(),userEntityRequest.getLastName(), userEntityRequest.getPassword(),userEntityRequest.getCreatedAt(),userEntityRequest.getUpdatedAt(),userEntityRequest.getDeletedAt());
 
     }
 }

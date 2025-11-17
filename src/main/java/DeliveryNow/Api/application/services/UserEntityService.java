@@ -32,6 +32,10 @@ public class UserEntityService implements UserEntityUseCases {
 
     @Override
     public UserEntityResponse createUser(UserEntityRequest user) {
+        UserEntity userDb = UserEntityMapper.toUserEntity(userEntityRepository.getUserEntityByEmail(user.email()));
+        if (userDb != null) {
+            throw new IllegalStateException("Um usuário com o e-mail '" + user.email() + "' já existe.");
+        }
         UserEntity userEntity = UserEntityMapper.toUserEntity(user);
         userEntity.setPassword(bCryptPasswordEncoder.encode(userEntity.getPassword()));
         return UserEntityMapper.toUserEntityResponse(userEntityRepository.createUserEntity(userEntity));
@@ -41,12 +45,10 @@ public class UserEntityService implements UserEntityUseCases {
     @Override
     public LoginResponse login(LoginRequest loginRequest) {
         var usernamePassword = new UsernamePasswordAuthenticationToken(loginRequest.email(), loginRequest.password());
-        try {
+
             var auth = this.authenticationManager.authenticate(usernamePassword);
             var token = tokenService.generateToken((JpaUserEntity)auth.getPrincipal());
             return new LoginResponse(token, ((JpaUserEntity) auth.getPrincipal()).getId());
-        }catch (Exception e){
-            throw new UsernameNotFoundException(e.getMessage());
-        }
+
     }
 }

@@ -8,10 +8,11 @@ import DeliveryNow.Api.domain.entities.enums.DeliveryStatus;
 import DeliveryNow.Api.domain.interfaces.DeliveryRepository;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.HttpClientErrorException;
 
+
+import java.time.LocalDate;
 import java.util.List;
-import java.util.Optional;
+
 
 @Service
 public class DeliveryRepositoryImpl implements DeliveryRepository {
@@ -29,7 +30,12 @@ public class DeliveryRepositoryImpl implements DeliveryRepository {
 
     @Override
     public Delivery getDeliveryById(Long id) {
-        return DeliveryMapper.toEntity(jpaDeliveryRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("Delivery not found with id " + id)));
+        JpaDelivery delivery = jpaDeliveryRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("Delivery not found with id " + id));
+        if(delivery.getStatus().equals(DeliveryStatus.PENDING )&& delivery.getExpectedDeliveryDate().isBefore(LocalDate.now())) {
+            delivery.setStatus(DeliveryStatus.LATE);
+            jpaDeliveryRepository.save(delivery);
+        }
+        return DeliveryMapper.toEntity(delivery);
     }
 
     @Override
