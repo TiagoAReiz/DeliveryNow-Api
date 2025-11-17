@@ -34896,3 +34896,505 @@
 2025-11-17T04:25:48.522Z 	 info: QueueGCManager:markSweepLoop() Sleep for 60000
 2025-11-17T04:25:48.523Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
 2025-11-17T04:25:48.523Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2025-11-17T04:26:22.027Z 	 info: Azurite Blob service is starting on 0.0.0.0:10000
+2025-11-17T04:26:22.028Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2025-11-17T04:26:22.028Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2025-11-17T04:26:22.223Z 	 info: BlobGCManager:start() Starting BlobGCManager. Set status to Initializing.
+2025-11-17T04:26:22.223Z 	 info: BlobGCManager:start() Trigger mark and sweep loop. Set status to Running.
+2025-11-17T04:26:22.224Z 	 info: BlobGCManager:markSweepLoop() Start next mark and sweep.
+2025-11-17T04:26:22.224Z 	 info: BlobGCManager:markSweep() Get all extents.
+2025-11-17T04:26:22.225Z 	 info: BlobGCManager:start() BlobGCManager successfully started.
+2025-11-17T04:26:22.227Z 	 info: BlobGCManager:markSweep() Got 15 extents.
+2025-11-17T04:26:22.227Z 	 info: BlobGCManager:markSweep() Get referred extents.
+2025-11-17T04:26:22.228Z 	 info: BlobGCManager:markSweep() Got referred extents, unreferenced extents count is 0.
+2025-11-17T04:26:22.229Z 	 info: BlobGCManager:markSweepLoop() Mark and sweep finished, taken 5ms.
+2025-11-17T04:26:22.229Z 	 info: BlobGCManager:markSweepLoop() Sleep for 600000ms.
+2025-11-17T04:26:22.234Z 	 info: Azurite Blob service successfully listens on http://0.0.0.0:10000
+2025-11-17T04:26:22.235Z 	 info: Azurite Queue service is starting on 0.0.0.0:10001
+2025-11-17T04:26:22.235Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2025-11-17T04:26:22.235Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2025-11-17T04:26:22.453Z 	 info: QueueGCManager:start() Starting QueueGCManager, set status to Initializing
+2025-11-17T04:26:22.453Z 	 info: QueueGCManager:start() Trigger mark and sweep loop, set status to Running.
+2025-11-17T04:26:22.453Z 	 info: QueueGCManager:markSweepLoop() Start new mark and sweep.
+2025-11-17T04:26:22.453Z 	 info: QueueGCManger:markSweep() Get all extents.
+2025-11-17T04:26:22.453Z 	 info: QueueGCManager:start() QueueGCManager successfully started.
+2025-11-17T04:26:22.454Z 	 info: QueueGCManager:marksweep() Get 0 extents.
+2025-11-17T04:26:22.454Z 	 info: QueueGCManager:markSweep() Get referred extents, then remove from allExtents.
+2025-11-17T04:26:22.454Z 	 info: QueueGCManager:markSweep() Got referred extents, unreferenced extents count is 0.
+2025-11-17T04:26:22.454Z 	 info: QueueGCManager:markSweepLoop() Mark and sweep finished, take 1ms.
+2025-11-17T04:26:22.454Z 	 info: QueueGCManager:markSweepLoop() Sleep for 60000
+2025-11-17T04:26:22.455Z 	 info: Azurite Queue service successfully listens on http://0.0.0.0:10001
+2025-11-17T04:26:22.456Z 	 info: Azurite Table service is starting on 0.0.0.0:10002
+2025-11-17T04:26:22.456Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2025-11-17T04:26:22.456Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2025-11-17T04:26:22.509Z 	 info: Azurite Table service successfully listens on http://0.0.0.0:10002
+2025-11-17T04:26:22.511Z 	 info: InstaceID e1434512-5144-476b-9df8-6e8389cf4c6d, SessionID 66348c41-a245-47d1-9708-b38888cd747f.
+2025-11-17T04:26:22.532Z 	 info: Telemetry initialize successfully.
+2025-11-17T04:26:22.534Z 	 verbose: Send start telemetry
+2025-11-17T04:26:39.990Z 3e3352ff-2b61-46c4-95a8-3983eeb613b4 info: BlobStorageContextMiddleware: RequestMethod=GET RequestURL=http://azurite/devstoreaccount1/quickstartblobs?restype=container RequestHeaders:{"host":"azurite:10000","date":"Mon, 17 Nov 2025 04:26:39 GMT","authorization":"SharedKey devstoreaccount1:Cq9/5Q3usfByZcdtPkNa0rjJYck6Ca0rXrgNrcrX3wg=","content-length":"0","x-ms-version":"2025-07-05","x-ms-client-request-id":"8fe0fc93-8c0b-492d-9560-8e3ae3ca7b54","accept":"application/xml","user-agent":"azsdk-java-azure-storage-blob/12.31.2 (17.0.17; Linux; 5.15.153.1-microsoft-standard-WSL2)"} ClientIP=172.20.0.4 Protocol=http HTTPVersion=1.1
+2025-11-17T04:26:39.990Z 3e3352ff-2b61-46c4-95a8-3983eeb613b4 info: BlobStorageContextMiddleware: Account=devstoreaccount1 Container=quickstartblobs Blob=
+2025-11-17T04:26:39.990Z 3e3352ff-2b61-46c4-95a8-3983eeb613b4 verbose: DispatchMiddleware: Dispatching request...
+2025-11-17T04:26:39.992Z 3e3352ff-2b61-46c4-95a8-3983eeb613b4 info: DispatchMiddleware: Operation=Container_GetProperties
+2025-11-17T04:26:39.992Z 3e3352ff-2b61-46c4-95a8-3983eeb613b4 verbose: AuthenticationMiddlewareFactory:createAuthenticationMiddleware() Validating authentications.
+2025-11-17T04:26:39.992Z 3e3352ff-2b61-46c4-95a8-3983eeb613b4 info: PublicAccessAuthenticator:validate() Start validation against public access.
+2025-11-17T04:26:39.992Z 3e3352ff-2b61-46c4-95a8-3983eeb613b4 debug: PublicAccessAuthenticator:validate() Getting account properties...
+2025-11-17T04:26:39.992Z 3e3352ff-2b61-46c4-95a8-3983eeb613b4 debug: PublicAccessAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: quickstartblobs, blob: 
+2025-11-17T04:26:39.993Z 3e3352ff-2b61-46c4-95a8-3983eeb613b4 debug: PublicAccessAuthenticator:validate() Skip public access authentication. Cannot get public access type for container quickstartblobs
+2025-11-17T04:26:39.994Z 3e3352ff-2b61-46c4-95a8-3983eeb613b4 info: BlobSharedKeyAuthenticator:validate() Start validation against account shared key authentication.
+2025-11-17T04:26:40.001Z 3e3352ff-2b61-46c4-95a8-3983eeb613b4 info: BlobSharedKeyAuthenticator:validate() [STRING TO SIGN]:"GET\n\n\n\n\n\nMon, 17 Nov 2025 04:26:39 GMT\n\n\n\n\n\nx-ms-client-request-id:8fe0fc93-8c0b-492d-9560-8e3ae3ca7b54\nx-ms-version:2025-07-05\n/devstoreaccount1/devstoreaccount1/quickstartblobs\nrestype:container"
+2025-11-17T04:26:40.002Z 3e3352ff-2b61-46c4-95a8-3983eeb613b4 info: BlobSharedKeyAuthenticator:validate() Calculated authentication header based on key1: SharedKey devstoreaccount1:Cq9/5Q3usfByZcdtPkNa0rjJYck6Ca0rXrgNrcrX3wg=
+2025-11-17T04:26:40.002Z 3e3352ff-2b61-46c4-95a8-3983eeb613b4 info: BlobSharedKeyAuthenticator:validate() Signature 1 matched.
+2025-11-17T04:26:40.002Z 3e3352ff-2b61-46c4-95a8-3983eeb613b4 verbose: DeserializerMiddleware: Start deserializing...
+2025-11-17T04:26:40.003Z 3e3352ff-2b61-46c4-95a8-3983eeb613b4 info: HandlerMiddleware: DeserializedParameters={"options":{"requestId":"8fe0fc93-8c0b-492d-9560-8e3ae3ca7b54","leaseAccessConditions":{}},"restype":"container","version":"2025-07-05"}
+2025-11-17T04:26:40.004Z 3e3352ff-2b61-46c4-95a8-3983eeb613b4 verbose: SerializerMiddleware: Start serializing...
+2025-11-17T04:26:40.005Z 3e3352ff-2b61-46c4-95a8-3983eeb613b4 verbose: Send Blob telemetry: B_Container_GetProperties
+2025-11-17T04:26:40.005Z 3e3352ff-2b61-46c4-95a8-3983eeb613b4 info: EndMiddleware: End response. TotalTimeInMS=15 StatusCode=200 StatusMessage=undefined Headers={"server":"Azurite-Blob/3.35.0","etag":"\"0x213A3766575CE20\"","last-modified":"Sat, 15 Nov 2025 16:03:51 GMT","x-ms-lease-state":"available","x-ms-lease-status":"unlocked","x-ms-client-request-id":"8fe0fc93-8c0b-492d-9560-8e3ae3ca7b54","x-ms-request-id":"3e3352ff-2b61-46c4-95a8-3983eeb613b4","x-ms-version":"2025-11-05","x-ms-has-immutability-policy":"false","x-ms-has-legal-hold":"false"}
+2025-11-17T04:26:51.688Z 4dd5a873-a33f-4a4b-9bbf-86f86750b906 info: BlobStorageContextMiddleware: RequestMethod=GET RequestURL=http://192.168.15.11/devstoreaccount1/quickstartblobs/0f75214d-2999-477f-b50a-0a2bd3afa986_Predator_Wallpaper_01_3840x2400.jpg?sv=2025-07-05&st=2025-11-17T04%3A26%3A44Z&se=2025-11-17T05%3A26%3A44Z&sr=c&sp=r&sig=10Ymy8p%2FaysZKM7xnwysE0%2FX1DGnbRNgL91XWKgdDnc%3D RequestHeaders:{"host":"192.168.15.11:10000","connection":"keep-alive","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36 Edg/142.0.0.0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7","accept-encoding":"gzip, deflate","accept-language":"pt-BR,pt;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6"} ClientIP=172.20.0.1 Protocol=http HTTPVersion=1.1
+2025-11-17T04:26:51.689Z 4dd5a873-a33f-4a4b-9bbf-86f86750b906 info: BlobStorageContextMiddleware: Account=devstoreaccount1 Container=quickstartblobs Blob=0f75214d-2999-477f-b50a-0a2bd3afa986_Predator_Wallpaper_01_3840x2400.jpg
+2025-11-17T04:26:51.689Z 4dd5a873-a33f-4a4b-9bbf-86f86750b906 verbose: DispatchMiddleware: Dispatching request...
+2025-11-17T04:26:51.689Z 4dd5a873-a33f-4a4b-9bbf-86f86750b906 info: DispatchMiddleware: Operation=Blob_Download
+2025-11-17T04:26:51.689Z 4dd5a873-a33f-4a4b-9bbf-86f86750b906 verbose: AuthenticationMiddlewareFactory:createAuthenticationMiddleware() Validating authentications.
+2025-11-17T04:26:51.689Z 4dd5a873-a33f-4a4b-9bbf-86f86750b906 info: PublicAccessAuthenticator:validate() Start validation against public access.
+2025-11-17T04:26:51.689Z 4dd5a873-a33f-4a4b-9bbf-86f86750b906 debug: PublicAccessAuthenticator:validate() Getting account properties...
+2025-11-17T04:26:51.689Z 4dd5a873-a33f-4a4b-9bbf-86f86750b906 debug: PublicAccessAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: quickstartblobs, blob: 0f75214d-2999-477f-b50a-0a2bd3afa986_Predator_Wallpaper_01_3840x2400.jpg
+2025-11-17T04:26:51.689Z 4dd5a873-a33f-4a4b-9bbf-86f86750b906 debug: PublicAccessAuthenticator:validate() Skip public access authentication. Cannot get public access type for container quickstartblobs
+2025-11-17T04:26:51.689Z 4dd5a873-a33f-4a4b-9bbf-86f86750b906 info: BlobSharedKeyAuthenticator:validate() Start validation against account shared key authentication.
+2025-11-17T04:26:51.689Z 4dd5a873-a33f-4a4b-9bbf-86f86750b906 info: BlobSharedKeyAuthenticator:validate() Request doesn't include valid authentication header. Skip shared key authentication.
+2025-11-17T04:26:51.690Z 4dd5a873-a33f-4a4b-9bbf-86f86750b906 info: AccountSASAuthenticator:validate() Start validation against account Shared Access Signature pattern.
+2025-11-17T04:26:51.690Z 4dd5a873-a33f-4a4b-9bbf-86f86750b906 debug: AccountSASAuthenticator:validate() Getting account properties...
+2025-11-17T04:26:51.690Z 4dd5a873-a33f-4a4b-9bbf-86f86750b906 debug: AccountSASAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: quickstartblobs, blob: 0f75214d-2999-477f-b50a-0a2bd3afa986_Predator_Wallpaper_01_3840x2400.jpg
+2025-11-17T04:26:51.690Z 4dd5a873-a33f-4a4b-9bbf-86f86750b906 debug: AccountSASAuthenticator:validate() Got account properties successfully.
+2025-11-17T04:26:51.690Z 4dd5a873-a33f-4a4b-9bbf-86f86750b906 debug: AccountSASAuthenticator:validate() Retrieved signature from URL parameter sig: 10Ymy8p/aysZKM7xnwysE0/X1DGnbRNgL91XWKgdDnc=
+2025-11-17T04:26:51.690Z 4dd5a873-a33f-4a4b-9bbf-86f86750b906 info: AccountSASAuthenticator:validate() Failed to get valid account SAS values from request.
+2025-11-17T04:26:51.690Z 4dd5a873-a33f-4a4b-9bbf-86f86750b906 info: BlobSASAuthenticator:validate() Start validation against blob service Shared Access Signature pattern.
+2025-11-17T04:26:51.690Z 4dd5a873-a33f-4a4b-9bbf-86f86750b906 debug: BlobSASAuthenticator:validate() Getting account properties...
+2025-11-17T04:26:51.691Z 4dd5a873-a33f-4a4b-9bbf-86f86750b906 debug: BlobSASAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: quickstartblobs, blob: 0f75214d-2999-477f-b50a-0a2bd3afa986_Predator_Wallpaper_01_3840x2400.jpg
+2025-11-17T04:26:51.691Z 4dd5a873-a33f-4a4b-9bbf-86f86750b906 debug: BlobSASAuthenticator:validate() Got account properties successfully.
+2025-11-17T04:26:51.691Z 4dd5a873-a33f-4a4b-9bbf-86f86750b906 debug: BlobSASAuthenticator:validate() Retrieved signature from URL parameter sig: 10Ymy8p/aysZKM7xnwysE0/X1DGnbRNgL91XWKgdDnc=
+2025-11-17T04:26:51.691Z 4dd5a873-a33f-4a4b-9bbf-86f86750b906 debug: BlobSASAuthenticator:validate() Signed resource type is c.
+2025-11-17T04:26:51.691Z 4dd5a873-a33f-4a4b-9bbf-86f86750b906 debug: BlobSASAuthenticator:validate() Successfully got valid blob service SAS values from request. {"version":"2025-07-05","startTime":"2025-11-17T04:26:44Z","expiryTime":"2025-11-17T05:26:44Z","permissions":"r","containerName":"quickstartblobs","blobName":"0f75214d-2999-477f-b50a-0a2bd3afa986_Predator_Wallpaper_01_3840x2400.jpg","signedResource":"c"}
+2025-11-17T04:26:51.691Z 4dd5a873-a33f-4a4b-9bbf-86f86750b906 info: BlobSASAuthenticator:validate() Validate signature based account key1.
+2025-11-17T04:26:51.691Z 4dd5a873-a33f-4a4b-9bbf-86f86750b906 debug: BlobSASAuthenticator:validate() String to sign is: "r\n2025-11-17T04:26:44Z\n2025-11-17T05:26:44Z\n/blob/devstoreaccount1/quickstartblobs\n\n\n\n2025-07-05\nc\n\n\n\n\n\n\n"
+2025-11-17T04:26:51.691Z 4dd5a873-a33f-4a4b-9bbf-86f86750b906 debug: BlobSASAuthenticator:validate() Calculated signature is: 10Ymy8p/aysZKM7xnwysE0/X1DGnbRNgL91XWKgdDnc=
+2025-11-17T04:26:51.691Z 4dd5a873-a33f-4a4b-9bbf-86f86750b906 info: BlobSASAuthenticator:validate() Signature based on key1 validation passed.
+2025-11-17T04:26:51.691Z 4dd5a873-a33f-4a4b-9bbf-86f86750b906 info: BlobSASAuthenticator:validate() Validate start and expiry time.
+2025-11-17T04:26:51.691Z 4dd5a873-a33f-4a4b-9bbf-86f86750b906 info: BlobSASAuthenticator:validate() Validate IP range.
+2025-11-17T04:26:51.691Z 4dd5a873-a33f-4a4b-9bbf-86f86750b906 info: BlobSASAuthenticator:validate() Validate request protocol.
+2025-11-17T04:26:51.691Z 4dd5a873-a33f-4a4b-9bbf-86f86750b906 debug: BlobSASAuthenticator:validate() Got permission requirements for operation Blob_Download - {"permission":"r"}
+2025-11-17T04:26:51.691Z 4dd5a873-a33f-4a4b-9bbf-86f86750b906 info: BlobSASAuthenticator:validate() Blob service SAS validation successfully.
+2025-11-17T04:26:51.691Z 4dd5a873-a33f-4a4b-9bbf-86f86750b906 verbose: DeserializerMiddleware: Start deserializing...
+2025-11-17T04:26:51.692Z 4dd5a873-a33f-4a4b-9bbf-86f86750b906 info: HandlerMiddleware: DeserializedParameters={"options":{"leaseAccessConditions":{},"cpkInfo":{},"modifiedAccessConditions":{}}}
+2025-11-17T04:26:51.693Z 4dd5a873-a33f-4a4b-9bbf-86f86750b906 info: BlobHandler:downloadBlockBlobOrAppendBlob() NormalizedDownloadRange=bytes=0-7803880 RequiredContentLength=7803881
+2025-11-17T04:26:51.693Z 4dd5a873-a33f-4a4b-9bbf-86f86750b906 debug: OperationQueue.operate() Schedule incoming job 5f12a4d8-0b5b-44d8-86c6-630c7a60b65a
+2025-11-17T04:26:51.693Z 4dd5a873-a33f-4a4b-9bbf-86f86750b906 debug: OperationQueue:execute() Current runningConcurrency:0 maxConcurrency:100 operations.length:1
+2025-11-17T04:26:51.693Z 4dd5a873-a33f-4a4b-9bbf-86f86750b906 verbose: FSExtentStore:readExtent() Creating read stream. LocationId:Default extentId:60a870cd-5823-4e4f-b612-ae48104ffbd3 path:/data/__blobstorage__/60a870cd-5823-4e4f-b612-ae48104ffbd3 offset:0 count:7803881 end:7803880
+2025-11-17T04:26:51.694Z 4dd5a873-a33f-4a4b-9bbf-86f86750b906 debug: OperationQueue.operate() Job 5f12a4d8-0b5b-44d8-86c6-630c7a60b65a completes callback, resolve.
+2025-11-17T04:26:51.694Z 4dd5a873-a33f-4a4b-9bbf-86f86750b906 verbose: SerializerMiddleware: Start serializing...
+2025-11-17T04:26:51.694Z 4dd5a873-a33f-4a4b-9bbf-86f86750b906 info: Serializer: Start returning stream body.
+2025-11-17T04:26:51.695Z 4dd5a873-a33f-4a4b-9bbf-86f86750b906 debug: OperationQueue:execute() Current runningConcurrency:0 maxConcurrency:100 operations.length:0
+2025-11-17T04:26:51.695Z 4dd5a873-a33f-4a4b-9bbf-86f86750b906 debug: OperationQueue:execute() return. Operation.length === 0
+2025-11-17T04:26:52.469Z 4dd5a873-a33f-4a4b-9bbf-86f86750b906 verbose: Send Blob telemetry: B_Blob_Download
+2025-11-17T04:26:52.469Z 4dd5a873-a33f-4a4b-9bbf-86f86750b906 info: EndMiddleware: End response. TotalTimeInMS=781 StatusCode=200 StatusMessage=OK Headers={"server":"Azurite-Blob/3.35.0","last-modified":"Sun, 16 Nov 2025 21:25:01 GMT","x-ms-creation-time":"Sun, 16 Nov 2025 21:25:01 GMT","content-length":"7803881","content-type":"application/octet-stream","etag":"\"0x1D6A0CC5D274FB0\"","content-md5":"kRgbHIDX6kwL77eL2ocKXw==","x-ms-blob-type":"BlockBlob","x-ms-lease-state":"available","x-ms-lease-status":"unlocked","x-ms-request-id":"4dd5a873-a33f-4a4b-9bbf-86f86750b906","x-ms-version":"2025-11-05","accept-ranges":"bytes","date":"Mon, 17 Nov 2025 04:26:51 GMT","x-ms-server-encrypted":"true","x-ms-blob-content-md5":"kRgbHIDX6kwL77eL2ocKXw=="}
+2025-11-17T04:26:52.496Z 4dd5a873-a33f-4a4b-9bbf-86f86750b906 verbose: FSExtentStore:readExtent() Read stream closed. LocationId:Default extentId:60a870cd-5823-4e4f-b612-ae48104ffbd3 path:/data/__blobstorage__/60a870cd-5823-4e4f-b612-ae48104ffbd3 offset:0 count:7803881 end:7803880
+2025-11-17T04:26:59.698Z 129b4dbc-6db0-471f-8c14-d3e1bc9afbb5 info: BlobStorageContextMiddleware: RequestMethod=GET RequestURL=http://192.168.15.11/devstoreaccount1/quickstartblobs/0f75214d-2999-477f-b50a-0a2bd3afa986_Predator_Wallpaper_01_3840x2400.jpg?sv=2025-07-05&st=2025-11-17T04%3A26%3A59Z&se=2025-11-17T05%3A26%3A59Z&sr=c&sp=r&sig=kboipL3gdZAiUUS4gJCOV8FKSATFqGZzjysZqLseYEk%3D RequestHeaders:{"host":"192.168.15.11:10000","accept":"*/*","accept-language":"pt-BR,pt;q=0.9","connection":"keep-alive","accept-encoding":"gzip, deflate","user-agent":"Expo/1017756 CFNetwork/3860.100.1 Darwin/25.0.0"} ClientIP=172.20.0.1 Protocol=http HTTPVersion=1.1
+2025-11-17T04:26:59.699Z 129b4dbc-6db0-471f-8c14-d3e1bc9afbb5 info: BlobStorageContextMiddleware: Account=devstoreaccount1 Container=quickstartblobs Blob=0f75214d-2999-477f-b50a-0a2bd3afa986_Predator_Wallpaper_01_3840x2400.jpg
+2025-11-17T04:26:59.699Z 129b4dbc-6db0-471f-8c14-d3e1bc9afbb5 verbose: DispatchMiddleware: Dispatching request...
+2025-11-17T04:26:59.699Z 129b4dbc-6db0-471f-8c14-d3e1bc9afbb5 info: DispatchMiddleware: Operation=Blob_Download
+2025-11-17T04:26:59.699Z 129b4dbc-6db0-471f-8c14-d3e1bc9afbb5 verbose: AuthenticationMiddlewareFactory:createAuthenticationMiddleware() Validating authentications.
+2025-11-17T04:26:59.699Z 129b4dbc-6db0-471f-8c14-d3e1bc9afbb5 info: PublicAccessAuthenticator:validate() Start validation against public access.
+2025-11-17T04:26:59.699Z 129b4dbc-6db0-471f-8c14-d3e1bc9afbb5 debug: PublicAccessAuthenticator:validate() Getting account properties...
+2025-11-17T04:26:59.699Z 129b4dbc-6db0-471f-8c14-d3e1bc9afbb5 debug: PublicAccessAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: quickstartblobs, blob: 0f75214d-2999-477f-b50a-0a2bd3afa986_Predator_Wallpaper_01_3840x2400.jpg
+2025-11-17T04:26:59.700Z 129b4dbc-6db0-471f-8c14-d3e1bc9afbb5 debug: PublicAccessAuthenticator:validate() Skip public access authentication. Cannot get public access type for container quickstartblobs
+2025-11-17T04:26:59.700Z 129b4dbc-6db0-471f-8c14-d3e1bc9afbb5 info: BlobSharedKeyAuthenticator:validate() Start validation against account shared key authentication.
+2025-11-17T04:26:59.700Z 129b4dbc-6db0-471f-8c14-d3e1bc9afbb5 info: BlobSharedKeyAuthenticator:validate() Request doesn't include valid authentication header. Skip shared key authentication.
+2025-11-17T04:26:59.700Z 129b4dbc-6db0-471f-8c14-d3e1bc9afbb5 info: AccountSASAuthenticator:validate() Start validation against account Shared Access Signature pattern.
+2025-11-17T04:26:59.700Z 129b4dbc-6db0-471f-8c14-d3e1bc9afbb5 debug: AccountSASAuthenticator:validate() Getting account properties...
+2025-11-17T04:26:59.700Z 129b4dbc-6db0-471f-8c14-d3e1bc9afbb5 debug: AccountSASAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: quickstartblobs, blob: 0f75214d-2999-477f-b50a-0a2bd3afa986_Predator_Wallpaper_01_3840x2400.jpg
+2025-11-17T04:26:59.700Z 129b4dbc-6db0-471f-8c14-d3e1bc9afbb5 debug: AccountSASAuthenticator:validate() Got account properties successfully.
+2025-11-17T04:26:59.700Z 129b4dbc-6db0-471f-8c14-d3e1bc9afbb5 debug: AccountSASAuthenticator:validate() Retrieved signature from URL parameter sig: kboipL3gdZAiUUS4gJCOV8FKSATFqGZzjysZqLseYEk=
+2025-11-17T04:26:59.700Z 129b4dbc-6db0-471f-8c14-d3e1bc9afbb5 info: AccountSASAuthenticator:validate() Failed to get valid account SAS values from request.
+2025-11-17T04:26:59.700Z 129b4dbc-6db0-471f-8c14-d3e1bc9afbb5 info: BlobSASAuthenticator:validate() Start validation against blob service Shared Access Signature pattern.
+2025-11-17T04:26:59.700Z 129b4dbc-6db0-471f-8c14-d3e1bc9afbb5 debug: BlobSASAuthenticator:validate() Getting account properties...
+2025-11-17T04:26:59.700Z 129b4dbc-6db0-471f-8c14-d3e1bc9afbb5 debug: BlobSASAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: quickstartblobs, blob: 0f75214d-2999-477f-b50a-0a2bd3afa986_Predator_Wallpaper_01_3840x2400.jpg
+2025-11-17T04:26:59.700Z 129b4dbc-6db0-471f-8c14-d3e1bc9afbb5 debug: BlobSASAuthenticator:validate() Got account properties successfully.
+2025-11-17T04:26:59.700Z 129b4dbc-6db0-471f-8c14-d3e1bc9afbb5 debug: BlobSASAuthenticator:validate() Retrieved signature from URL parameter sig: kboipL3gdZAiUUS4gJCOV8FKSATFqGZzjysZqLseYEk=
+2025-11-17T04:26:59.700Z 129b4dbc-6db0-471f-8c14-d3e1bc9afbb5 debug: BlobSASAuthenticator:validate() Signed resource type is c.
+2025-11-17T04:26:59.700Z 129b4dbc-6db0-471f-8c14-d3e1bc9afbb5 debug: BlobSASAuthenticator:validate() Successfully got valid blob service SAS values from request. {"version":"2025-07-05","startTime":"2025-11-17T04:26:59Z","expiryTime":"2025-11-17T05:26:59Z","permissions":"r","containerName":"quickstartblobs","blobName":"0f75214d-2999-477f-b50a-0a2bd3afa986_Predator_Wallpaper_01_3840x2400.jpg","signedResource":"c"}
+2025-11-17T04:26:59.700Z 129b4dbc-6db0-471f-8c14-d3e1bc9afbb5 info: BlobSASAuthenticator:validate() Validate signature based account key1.
+2025-11-17T04:26:59.700Z 129b4dbc-6db0-471f-8c14-d3e1bc9afbb5 debug: BlobSASAuthenticator:validate() String to sign is: "r\n2025-11-17T04:26:59Z\n2025-11-17T05:26:59Z\n/blob/devstoreaccount1/quickstartblobs\n\n\n\n2025-07-05\nc\n\n\n\n\n\n\n"
+2025-11-17T04:26:59.700Z 129b4dbc-6db0-471f-8c14-d3e1bc9afbb5 debug: BlobSASAuthenticator:validate() Calculated signature is: kboipL3gdZAiUUS4gJCOV8FKSATFqGZzjysZqLseYEk=
+2025-11-17T04:26:59.700Z 129b4dbc-6db0-471f-8c14-d3e1bc9afbb5 info: BlobSASAuthenticator:validate() Signature based on key1 validation passed.
+2025-11-17T04:26:59.700Z 129b4dbc-6db0-471f-8c14-d3e1bc9afbb5 info: BlobSASAuthenticator:validate() Validate start and expiry time.
+2025-11-17T04:26:59.700Z 129b4dbc-6db0-471f-8c14-d3e1bc9afbb5 info: BlobSASAuthenticator:validate() Validate IP range.
+2025-11-17T04:26:59.700Z 129b4dbc-6db0-471f-8c14-d3e1bc9afbb5 info: BlobSASAuthenticator:validate() Validate request protocol.
+2025-11-17T04:26:59.700Z 129b4dbc-6db0-471f-8c14-d3e1bc9afbb5 debug: BlobSASAuthenticator:validate() Got permission requirements for operation Blob_Download - {"permission":"r"}
+2025-11-17T04:26:59.700Z 129b4dbc-6db0-471f-8c14-d3e1bc9afbb5 info: BlobSASAuthenticator:validate() Blob service SAS validation successfully.
+2025-11-17T04:26:59.700Z 129b4dbc-6db0-471f-8c14-d3e1bc9afbb5 verbose: DeserializerMiddleware: Start deserializing...
+2025-11-17T04:26:59.701Z 129b4dbc-6db0-471f-8c14-d3e1bc9afbb5 info: HandlerMiddleware: DeserializedParameters={"options":{"leaseAccessConditions":{},"cpkInfo":{},"modifiedAccessConditions":{}}}
+2025-11-17T04:26:59.701Z 129b4dbc-6db0-471f-8c14-d3e1bc9afbb5 info: BlobHandler:downloadBlockBlobOrAppendBlob() NormalizedDownloadRange=bytes=0-7803880 RequiredContentLength=7803881
+2025-11-17T04:26:59.701Z 129b4dbc-6db0-471f-8c14-d3e1bc9afbb5 debug: OperationQueue.operate() Schedule incoming job de10d9ce-8561-47ff-8795-33793731eaee
+2025-11-17T04:26:59.701Z 129b4dbc-6db0-471f-8c14-d3e1bc9afbb5 debug: OperationQueue:execute() Current runningConcurrency:0 maxConcurrency:100 operations.length:1
+2025-11-17T04:26:59.701Z 129b4dbc-6db0-471f-8c14-d3e1bc9afbb5 verbose: FSExtentStore:readExtent() Creating read stream. LocationId:Default extentId:60a870cd-5823-4e4f-b612-ae48104ffbd3 path:/data/__blobstorage__/60a870cd-5823-4e4f-b612-ae48104ffbd3 offset:0 count:7803881 end:7803880
+2025-11-17T04:26:59.701Z 129b4dbc-6db0-471f-8c14-d3e1bc9afbb5 debug: OperationQueue.operate() Job de10d9ce-8561-47ff-8795-33793731eaee completes callback, resolve.
+2025-11-17T04:26:59.701Z 129b4dbc-6db0-471f-8c14-d3e1bc9afbb5 verbose: SerializerMiddleware: Start serializing...
+2025-11-17T04:26:59.701Z 129b4dbc-6db0-471f-8c14-d3e1bc9afbb5 info: Serializer: Start returning stream body.
+2025-11-17T04:26:59.702Z 129b4dbc-6db0-471f-8c14-d3e1bc9afbb5 debug: OperationQueue:execute() Current runningConcurrency:0 maxConcurrency:100 operations.length:0
+2025-11-17T04:26:59.702Z 129b4dbc-6db0-471f-8c14-d3e1bc9afbb5 debug: OperationQueue:execute() return. Operation.length === 0
+2025-11-17T04:27:00.318Z 129b4dbc-6db0-471f-8c14-d3e1bc9afbb5 verbose: Send Blob telemetry: B_Blob_Download
+2025-11-17T04:27:00.318Z 129b4dbc-6db0-471f-8c14-d3e1bc9afbb5 info: EndMiddleware: End response. TotalTimeInMS=620 StatusCode=200 StatusMessage=OK Headers={"server":"Azurite-Blob/3.35.0","last-modified":"Sun, 16 Nov 2025 21:25:01 GMT","x-ms-creation-time":"Sun, 16 Nov 2025 21:25:01 GMT","content-length":"7803881","content-type":"application/octet-stream","etag":"\"0x1D6A0CC5D274FB0\"","content-md5":"kRgbHIDX6kwL77eL2ocKXw==","x-ms-blob-type":"BlockBlob","x-ms-lease-state":"available","x-ms-lease-status":"unlocked","x-ms-request-id":"129b4dbc-6db0-471f-8c14-d3e1bc9afbb5","x-ms-version":"2025-11-05","accept-ranges":"bytes","date":"Mon, 17 Nov 2025 04:26:59 GMT","x-ms-server-encrypted":"true","x-ms-blob-content-md5":"kRgbHIDX6kwL77eL2ocKXw=="}
+2025-11-17T04:27:00.318Z 129b4dbc-6db0-471f-8c14-d3e1bc9afbb5 verbose: FSExtentStore:readExtent() Read stream closed. LocationId:Default extentId:60a870cd-5823-4e4f-b612-ae48104ffbd3 path:/data/__blobstorage__/60a870cd-5823-4e4f-b612-ae48104ffbd3 offset:0 count:7803881 end:7803880
+2025-11-17T04:27:02.044Z 40fe9cae-da5c-4318-9565-13fb5701a728 info: BlobStorageContextMiddleware: RequestMethod=GET RequestURL=http://192.168.15.11/devstoreaccount1/quickstartblobs/17b43b4a-d0fd-42a3-bda4-708870117e8d_photo.jpg?sv=2025-07-05&st=2025-11-17T04%3A27%3A01Z&se=2025-11-17T05%3A27%3A01Z&sr=c&sp=r&sig=MM%2FkYmitvOfzNv0s9IPpGdq2%2FIrcMWSNNR8z60DZBD0%3D RequestHeaders:{"host":"192.168.15.11:10000","accept":"*/*","accept-language":"pt-BR,pt;q=0.9","connection":"keep-alive","accept-encoding":"gzip, deflate","user-agent":"Expo/1017756 CFNetwork/3860.100.1 Darwin/25.0.0"} ClientIP=172.20.0.1 Protocol=http HTTPVersion=1.1
+2025-11-17T04:27:02.045Z 40fe9cae-da5c-4318-9565-13fb5701a728 info: BlobStorageContextMiddleware: Account=devstoreaccount1 Container=quickstartblobs Blob=17b43b4a-d0fd-42a3-bda4-708870117e8d_photo.jpg
+2025-11-17T04:27:02.045Z 40fe9cae-da5c-4318-9565-13fb5701a728 verbose: DispatchMiddleware: Dispatching request...
+2025-11-17T04:27:02.045Z 40fe9cae-da5c-4318-9565-13fb5701a728 info: DispatchMiddleware: Operation=Blob_Download
+2025-11-17T04:27:02.046Z 40fe9cae-da5c-4318-9565-13fb5701a728 verbose: AuthenticationMiddlewareFactory:createAuthenticationMiddleware() Validating authentications.
+2025-11-17T04:27:02.046Z 40fe9cae-da5c-4318-9565-13fb5701a728 info: PublicAccessAuthenticator:validate() Start validation against public access.
+2025-11-17T04:27:02.046Z 40fe9cae-da5c-4318-9565-13fb5701a728 debug: PublicAccessAuthenticator:validate() Getting account properties...
+2025-11-17T04:27:02.046Z 40fe9cae-da5c-4318-9565-13fb5701a728 debug: PublicAccessAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: quickstartblobs, blob: 17b43b4a-d0fd-42a3-bda4-708870117e8d_photo.jpg
+2025-11-17T04:27:02.046Z 40fe9cae-da5c-4318-9565-13fb5701a728 debug: PublicAccessAuthenticator:validate() Skip public access authentication. Cannot get public access type for container quickstartblobs
+2025-11-17T04:27:02.046Z 40fe9cae-da5c-4318-9565-13fb5701a728 info: BlobSharedKeyAuthenticator:validate() Start validation against account shared key authentication.
+2025-11-17T04:27:02.046Z 40fe9cae-da5c-4318-9565-13fb5701a728 info: BlobSharedKeyAuthenticator:validate() Request doesn't include valid authentication header. Skip shared key authentication.
+2025-11-17T04:27:02.046Z 40fe9cae-da5c-4318-9565-13fb5701a728 info: AccountSASAuthenticator:validate() Start validation against account Shared Access Signature pattern.
+2025-11-17T04:27:02.046Z 40fe9cae-da5c-4318-9565-13fb5701a728 debug: AccountSASAuthenticator:validate() Getting account properties...
+2025-11-17T04:27:02.046Z 40fe9cae-da5c-4318-9565-13fb5701a728 debug: AccountSASAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: quickstartblobs, blob: 17b43b4a-d0fd-42a3-bda4-708870117e8d_photo.jpg
+2025-11-17T04:27:02.046Z 40fe9cae-da5c-4318-9565-13fb5701a728 debug: AccountSASAuthenticator:validate() Got account properties successfully.
+2025-11-17T04:27:02.046Z 40fe9cae-da5c-4318-9565-13fb5701a728 debug: AccountSASAuthenticator:validate() Retrieved signature from URL parameter sig: MM/kYmitvOfzNv0s9IPpGdq2/IrcMWSNNR8z60DZBD0=
+2025-11-17T04:27:02.046Z 40fe9cae-da5c-4318-9565-13fb5701a728 info: AccountSASAuthenticator:validate() Failed to get valid account SAS values from request.
+2025-11-17T04:27:02.046Z 40fe9cae-da5c-4318-9565-13fb5701a728 info: BlobSASAuthenticator:validate() Start validation against blob service Shared Access Signature pattern.
+2025-11-17T04:27:02.046Z 40fe9cae-da5c-4318-9565-13fb5701a728 debug: BlobSASAuthenticator:validate() Getting account properties...
+2025-11-17T04:27:02.046Z 40fe9cae-da5c-4318-9565-13fb5701a728 debug: BlobSASAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: quickstartblobs, blob: 17b43b4a-d0fd-42a3-bda4-708870117e8d_photo.jpg
+2025-11-17T04:27:02.046Z 40fe9cae-da5c-4318-9565-13fb5701a728 debug: BlobSASAuthenticator:validate() Got account properties successfully.
+2025-11-17T04:27:02.046Z 40fe9cae-da5c-4318-9565-13fb5701a728 debug: BlobSASAuthenticator:validate() Retrieved signature from URL parameter sig: MM/kYmitvOfzNv0s9IPpGdq2/IrcMWSNNR8z60DZBD0=
+2025-11-17T04:27:02.046Z 40fe9cae-da5c-4318-9565-13fb5701a728 debug: BlobSASAuthenticator:validate() Signed resource type is c.
+2025-11-17T04:27:02.046Z 40fe9cae-da5c-4318-9565-13fb5701a728 debug: BlobSASAuthenticator:validate() Successfully got valid blob service SAS values from request. {"version":"2025-07-05","startTime":"2025-11-17T04:27:01Z","expiryTime":"2025-11-17T05:27:01Z","permissions":"r","containerName":"quickstartblobs","blobName":"17b43b4a-d0fd-42a3-bda4-708870117e8d_photo.jpg","signedResource":"c"}
+2025-11-17T04:27:02.046Z 40fe9cae-da5c-4318-9565-13fb5701a728 info: BlobSASAuthenticator:validate() Validate signature based account key1.
+2025-11-17T04:27:02.046Z 40fe9cae-da5c-4318-9565-13fb5701a728 debug: BlobSASAuthenticator:validate() String to sign is: "r\n2025-11-17T04:27:01Z\n2025-11-17T05:27:01Z\n/blob/devstoreaccount1/quickstartblobs\n\n\n\n2025-07-05\nc\n\n\n\n\n\n\n"
+2025-11-17T04:27:02.046Z 40fe9cae-da5c-4318-9565-13fb5701a728 debug: BlobSASAuthenticator:validate() Calculated signature is: MM/kYmitvOfzNv0s9IPpGdq2/IrcMWSNNR8z60DZBD0=
+2025-11-17T04:27:02.046Z 40fe9cae-da5c-4318-9565-13fb5701a728 info: BlobSASAuthenticator:validate() Signature based on key1 validation passed.
+2025-11-17T04:27:02.046Z 40fe9cae-da5c-4318-9565-13fb5701a728 info: BlobSASAuthenticator:validate() Validate start and expiry time.
+2025-11-17T04:27:02.046Z 40fe9cae-da5c-4318-9565-13fb5701a728 info: BlobSASAuthenticator:validate() Validate IP range.
+2025-11-17T04:27:02.046Z 40fe9cae-da5c-4318-9565-13fb5701a728 info: BlobSASAuthenticator:validate() Validate request protocol.
+2025-11-17T04:27:02.046Z 40fe9cae-da5c-4318-9565-13fb5701a728 debug: BlobSASAuthenticator:validate() Got permission requirements for operation Blob_Download - {"permission":"r"}
+2025-11-17T04:27:02.046Z 40fe9cae-da5c-4318-9565-13fb5701a728 info: BlobSASAuthenticator:validate() Blob service SAS validation successfully.
+2025-11-17T04:27:02.046Z 40fe9cae-da5c-4318-9565-13fb5701a728 verbose: DeserializerMiddleware: Start deserializing...
+2025-11-17T04:27:02.046Z 40fe9cae-da5c-4318-9565-13fb5701a728 info: HandlerMiddleware: DeserializedParameters={"options":{"leaseAccessConditions":{},"cpkInfo":{},"modifiedAccessConditions":{}}}
+2025-11-17T04:27:02.047Z 40fe9cae-da5c-4318-9565-13fb5701a728 info: BlobHandler:downloadBlockBlobOrAppendBlob() NormalizedDownloadRange=bytes=0-1767941 RequiredContentLength=1767942
+2025-11-17T04:27:02.047Z 40fe9cae-da5c-4318-9565-13fb5701a728 debug: OperationQueue.operate() Schedule incoming job 374c76f6-e73a-4e80-8ea4-17e1029b44a4
+2025-11-17T04:27:02.047Z 40fe9cae-da5c-4318-9565-13fb5701a728 debug: OperationQueue:execute() Current runningConcurrency:0 maxConcurrency:100 operations.length:1
+2025-11-17T04:27:02.047Z 40fe9cae-da5c-4318-9565-13fb5701a728 verbose: FSExtentStore:readExtent() Creating read stream. LocationId:Default extentId:60a870cd-5823-4e4f-b612-ae48104ffbd3 path:/data/__blobstorage__/60a870cd-5823-4e4f-b612-ae48104ffbd3 offset:7803881 count:1767942 end:9571822
+2025-11-17T04:27:02.048Z 40fe9cae-da5c-4318-9565-13fb5701a728 debug: OperationQueue.operate() Job 374c76f6-e73a-4e80-8ea4-17e1029b44a4 completes callback, resolve.
+2025-11-17T04:27:02.048Z 40fe9cae-da5c-4318-9565-13fb5701a728 verbose: SerializerMiddleware: Start serializing...
+2025-11-17T04:27:02.048Z 40fe9cae-da5c-4318-9565-13fb5701a728 info: Serializer: Start returning stream body.
+2025-11-17T04:27:02.049Z 40fe9cae-da5c-4318-9565-13fb5701a728 debug: OperationQueue:execute() Current runningConcurrency:0 maxConcurrency:100 operations.length:0
+2025-11-17T04:27:02.049Z 40fe9cae-da5c-4318-9565-13fb5701a728 debug: OperationQueue:execute() return. Operation.length === 0
+2025-11-17T04:27:02.149Z 40fe9cae-da5c-4318-9565-13fb5701a728 verbose: Send Blob telemetry: B_Blob_Download
+2025-11-17T04:27:02.149Z 40fe9cae-da5c-4318-9565-13fb5701a728 info: EndMiddleware: End response. TotalTimeInMS=105 StatusCode=200 StatusMessage=OK Headers={"server":"Azurite-Blob/3.35.0","last-modified":"Sun, 16 Nov 2025 21:35:43 GMT","x-ms-creation-time":"Sun, 16 Nov 2025 21:35:43 GMT","content-length":"1767942","content-type":"application/octet-stream","etag":"\"0x1C03EAF648FCB80\"","content-md5":"1Ehr4odyVUIjCiHY2iOxIQ==","x-ms-blob-type":"BlockBlob","x-ms-lease-state":"available","x-ms-lease-status":"unlocked","x-ms-request-id":"40fe9cae-da5c-4318-9565-13fb5701a728","x-ms-version":"2025-11-05","accept-ranges":"bytes","date":"Mon, 17 Nov 2025 04:27:02 GMT","x-ms-server-encrypted":"true","x-ms-blob-content-md5":"1Ehr4odyVUIjCiHY2iOxIQ=="}
+2025-11-17T04:27:02.161Z 40fe9cae-da5c-4318-9565-13fb5701a728 verbose: FSExtentStore:readExtent() Read stream closed. LocationId:Default extentId:60a870cd-5823-4e4f-b612-ae48104ffbd3 path:/data/__blobstorage__/60a870cd-5823-4e4f-b612-ae48104ffbd3 offset:7803881 count:1767942 end:9571822
+2025-11-17T04:27:03.828Z ef88db04-fad6-4ba7-adc8-0bd9ed17bff5 info: BlobStorageContextMiddleware: RequestMethod=GET RequestURL=http://192.168.15.11/devstoreaccount1/quickstartblobs/0a91c359-b5fa-479e-a186-31aaa374bd5f_photo.jpg?sv=2025-07-05&st=2025-11-17T04%3A27%3A03Z&se=2025-11-17T05%3A27%3A03Z&sr=c&sp=r&sig=QVQkJFcU5UoHmxcGtqkotGU%2BAba6PBBkSR6bkpQFayY%3D RequestHeaders:{"host":"192.168.15.11:10000","accept":"*/*","accept-language":"pt-BR,pt;q=0.9","connection":"keep-alive","accept-encoding":"gzip, deflate","user-agent":"Expo/1017756 CFNetwork/3860.100.1 Darwin/25.0.0"} ClientIP=172.20.0.1 Protocol=http HTTPVersion=1.1
+2025-11-17T04:27:03.828Z ef88db04-fad6-4ba7-adc8-0bd9ed17bff5 info: BlobStorageContextMiddleware: Account=devstoreaccount1 Container=quickstartblobs Blob=0a91c359-b5fa-479e-a186-31aaa374bd5f_photo.jpg
+2025-11-17T04:27:03.828Z ef88db04-fad6-4ba7-adc8-0bd9ed17bff5 verbose: DispatchMiddleware: Dispatching request...
+2025-11-17T04:27:03.828Z ef88db04-fad6-4ba7-adc8-0bd9ed17bff5 info: DispatchMiddleware: Operation=Blob_Download
+2025-11-17T04:27:03.829Z ef88db04-fad6-4ba7-adc8-0bd9ed17bff5 verbose: AuthenticationMiddlewareFactory:createAuthenticationMiddleware() Validating authentications.
+2025-11-17T04:27:03.829Z ef88db04-fad6-4ba7-adc8-0bd9ed17bff5 info: PublicAccessAuthenticator:validate() Start validation against public access.
+2025-11-17T04:27:03.829Z ef88db04-fad6-4ba7-adc8-0bd9ed17bff5 debug: PublicAccessAuthenticator:validate() Getting account properties...
+2025-11-17T04:27:03.829Z ef88db04-fad6-4ba7-adc8-0bd9ed17bff5 debug: PublicAccessAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: quickstartblobs, blob: 0a91c359-b5fa-479e-a186-31aaa374bd5f_photo.jpg
+2025-11-17T04:27:03.829Z ef88db04-fad6-4ba7-adc8-0bd9ed17bff5 debug: PublicAccessAuthenticator:validate() Skip public access authentication. Cannot get public access type for container quickstartblobs
+2025-11-17T04:27:03.829Z ef88db04-fad6-4ba7-adc8-0bd9ed17bff5 info: BlobSharedKeyAuthenticator:validate() Start validation against account shared key authentication.
+2025-11-17T04:27:03.829Z ef88db04-fad6-4ba7-adc8-0bd9ed17bff5 info: BlobSharedKeyAuthenticator:validate() Request doesn't include valid authentication header. Skip shared key authentication.
+2025-11-17T04:27:03.829Z ef88db04-fad6-4ba7-adc8-0bd9ed17bff5 info: AccountSASAuthenticator:validate() Start validation against account Shared Access Signature pattern.
+2025-11-17T04:27:03.829Z ef88db04-fad6-4ba7-adc8-0bd9ed17bff5 debug: AccountSASAuthenticator:validate() Getting account properties...
+2025-11-17T04:27:03.829Z ef88db04-fad6-4ba7-adc8-0bd9ed17bff5 debug: AccountSASAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: quickstartblobs, blob: 0a91c359-b5fa-479e-a186-31aaa374bd5f_photo.jpg
+2025-11-17T04:27:03.829Z ef88db04-fad6-4ba7-adc8-0bd9ed17bff5 debug: AccountSASAuthenticator:validate() Got account properties successfully.
+2025-11-17T04:27:03.829Z ef88db04-fad6-4ba7-adc8-0bd9ed17bff5 debug: AccountSASAuthenticator:validate() Retrieved signature from URL parameter sig: QVQkJFcU5UoHmxcGtqkotGU+Aba6PBBkSR6bkpQFayY=
+2025-11-17T04:27:03.829Z ef88db04-fad6-4ba7-adc8-0bd9ed17bff5 info: AccountSASAuthenticator:validate() Failed to get valid account SAS values from request.
+2025-11-17T04:27:03.829Z ef88db04-fad6-4ba7-adc8-0bd9ed17bff5 info: BlobSASAuthenticator:validate() Start validation against blob service Shared Access Signature pattern.
+2025-11-17T04:27:03.829Z ef88db04-fad6-4ba7-adc8-0bd9ed17bff5 debug: BlobSASAuthenticator:validate() Getting account properties...
+2025-11-17T04:27:03.829Z ef88db04-fad6-4ba7-adc8-0bd9ed17bff5 debug: BlobSASAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: quickstartblobs, blob: 0a91c359-b5fa-479e-a186-31aaa374bd5f_photo.jpg
+2025-11-17T04:27:03.829Z ef88db04-fad6-4ba7-adc8-0bd9ed17bff5 debug: BlobSASAuthenticator:validate() Got account properties successfully.
+2025-11-17T04:27:03.829Z ef88db04-fad6-4ba7-adc8-0bd9ed17bff5 debug: BlobSASAuthenticator:validate() Retrieved signature from URL parameter sig: QVQkJFcU5UoHmxcGtqkotGU+Aba6PBBkSR6bkpQFayY=
+2025-11-17T04:27:03.829Z ef88db04-fad6-4ba7-adc8-0bd9ed17bff5 debug: BlobSASAuthenticator:validate() Signed resource type is c.
+2025-11-17T04:27:03.829Z ef88db04-fad6-4ba7-adc8-0bd9ed17bff5 debug: BlobSASAuthenticator:validate() Successfully got valid blob service SAS values from request. {"version":"2025-07-05","startTime":"2025-11-17T04:27:03Z","expiryTime":"2025-11-17T05:27:03Z","permissions":"r","containerName":"quickstartblobs","blobName":"0a91c359-b5fa-479e-a186-31aaa374bd5f_photo.jpg","signedResource":"c"}
+2025-11-17T04:27:03.829Z ef88db04-fad6-4ba7-adc8-0bd9ed17bff5 info: BlobSASAuthenticator:validate() Validate signature based account key1.
+2025-11-17T04:27:03.829Z ef88db04-fad6-4ba7-adc8-0bd9ed17bff5 debug: BlobSASAuthenticator:validate() String to sign is: "r\n2025-11-17T04:27:03Z\n2025-11-17T05:27:03Z\n/blob/devstoreaccount1/quickstartblobs\n\n\n\n2025-07-05\nc\n\n\n\n\n\n\n"
+2025-11-17T04:27:03.829Z ef88db04-fad6-4ba7-adc8-0bd9ed17bff5 debug: BlobSASAuthenticator:validate() Calculated signature is: QVQkJFcU5UoHmxcGtqkotGU+Aba6PBBkSR6bkpQFayY=
+2025-11-17T04:27:03.829Z ef88db04-fad6-4ba7-adc8-0bd9ed17bff5 info: BlobSASAuthenticator:validate() Signature based on key1 validation passed.
+2025-11-17T04:27:03.829Z ef88db04-fad6-4ba7-adc8-0bd9ed17bff5 info: BlobSASAuthenticator:validate() Validate start and expiry time.
+2025-11-17T04:27:03.829Z ef88db04-fad6-4ba7-adc8-0bd9ed17bff5 info: BlobSASAuthenticator:validate() Validate IP range.
+2025-11-17T04:27:03.829Z ef88db04-fad6-4ba7-adc8-0bd9ed17bff5 info: BlobSASAuthenticator:validate() Validate request protocol.
+2025-11-17T04:27:03.829Z ef88db04-fad6-4ba7-adc8-0bd9ed17bff5 debug: BlobSASAuthenticator:validate() Got permission requirements for operation Blob_Download - {"permission":"r"}
+2025-11-17T04:27:03.829Z ef88db04-fad6-4ba7-adc8-0bd9ed17bff5 info: BlobSASAuthenticator:validate() Blob service SAS validation successfully.
+2025-11-17T04:27:03.829Z ef88db04-fad6-4ba7-adc8-0bd9ed17bff5 verbose: DeserializerMiddleware: Start deserializing...
+2025-11-17T04:27:03.829Z ef88db04-fad6-4ba7-adc8-0bd9ed17bff5 info: HandlerMiddleware: DeserializedParameters={"options":{"leaseAccessConditions":{},"cpkInfo":{},"modifiedAccessConditions":{}}}
+2025-11-17T04:27:03.829Z ef88db04-fad6-4ba7-adc8-0bd9ed17bff5 info: BlobHandler:downloadBlockBlobOrAppendBlob() NormalizedDownloadRange=bytes=0-2023798 RequiredContentLength=2023799
+2025-11-17T04:27:03.830Z ef88db04-fad6-4ba7-adc8-0bd9ed17bff5 debug: OperationQueue.operate() Schedule incoming job 6cddad7d-dc0a-434c-9193-142800ac0fd8
+2025-11-17T04:27:03.830Z ef88db04-fad6-4ba7-adc8-0bd9ed17bff5 debug: OperationQueue:execute() Current runningConcurrency:0 maxConcurrency:100 operations.length:1
+2025-11-17T04:27:03.830Z ef88db04-fad6-4ba7-adc8-0bd9ed17bff5 verbose: FSExtentStore:readExtent() Creating read stream. LocationId:Default extentId:43afe384-5cd1-4a6a-83b4-8b9f9a91d895 path:/data/__blobstorage__/43afe384-5cd1-4a6a-83b4-8b9f9a91d895 offset:2058718 count:2023799 end:4082516
+2025-11-17T04:27:03.830Z ef88db04-fad6-4ba7-adc8-0bd9ed17bff5 debug: OperationQueue.operate() Job 6cddad7d-dc0a-434c-9193-142800ac0fd8 completes callback, resolve.
+2025-11-17T04:27:03.830Z ef88db04-fad6-4ba7-adc8-0bd9ed17bff5 verbose: SerializerMiddleware: Start serializing...
+2025-11-17T04:27:03.830Z ef88db04-fad6-4ba7-adc8-0bd9ed17bff5 info: Serializer: Start returning stream body.
+2025-11-17T04:27:03.830Z ef88db04-fad6-4ba7-adc8-0bd9ed17bff5 debug: OperationQueue:execute() Current runningConcurrency:0 maxConcurrency:100 operations.length:0
+2025-11-17T04:27:03.830Z ef88db04-fad6-4ba7-adc8-0bd9ed17bff5 debug: OperationQueue:execute() return. Operation.length === 0
+2025-11-17T04:27:03.877Z ef88db04-fad6-4ba7-adc8-0bd9ed17bff5 verbose: Send Blob telemetry: B_Blob_Download
+2025-11-17T04:27:03.877Z ef88db04-fad6-4ba7-adc8-0bd9ed17bff5 info: EndMiddleware: End response. TotalTimeInMS=49 StatusCode=200 StatusMessage=OK Headers={"server":"Azurite-Blob/3.35.0","last-modified":"Sun, 16 Nov 2025 22:49:31 GMT","x-ms-creation-time":"Sun, 16 Nov 2025 22:49:31 GMT","content-length":"2023799","content-type":"application/octet-stream","etag":"\"0x23219630DC9CE60\"","content-md5":"j12JuusGBly3DvKuR9NmiQ==","x-ms-blob-type":"BlockBlob","x-ms-lease-state":"available","x-ms-lease-status":"unlocked","x-ms-request-id":"ef88db04-fad6-4ba7-adc8-0bd9ed17bff5","x-ms-version":"2025-11-05","accept-ranges":"bytes","date":"Mon, 17 Nov 2025 04:27:03 GMT","x-ms-server-encrypted":"true","x-ms-blob-content-md5":"j12JuusGBly3DvKuR9NmiQ=="}
+2025-11-17T04:27:03.878Z bc7ec47d-d1e2-4748-b0c8-012a9050c7ac info: BlobStorageContextMiddleware: RequestMethod=GET RequestURL=http://192.168.15.11/devstoreaccount1/quickstartblobs/afd15fa1-95c6-4d68-8c2d-c650fe2c297e_photo.jpg?sv=2025-07-05&st=2025-11-17T04%3A27%3A03Z&se=2025-11-17T05%3A27%3A03Z&sr=c&sp=r&sig=QVQkJFcU5UoHmxcGtqkotGU%2BAba6PBBkSR6bkpQFayY%3D RequestHeaders:{"host":"192.168.15.11:10000","accept":"*/*","accept-language":"pt-BR,pt;q=0.9","connection":"keep-alive","accept-encoding":"gzip, deflate","user-agent":"Expo/1017756 CFNetwork/3860.100.1 Darwin/25.0.0"} ClientIP=172.20.0.1 Protocol=http HTTPVersion=1.1
+2025-11-17T04:27:03.878Z bc7ec47d-d1e2-4748-b0c8-012a9050c7ac info: BlobStorageContextMiddleware: Account=devstoreaccount1 Container=quickstartblobs Blob=afd15fa1-95c6-4d68-8c2d-c650fe2c297e_photo.jpg
+2025-11-17T04:27:03.878Z bc7ec47d-d1e2-4748-b0c8-012a9050c7ac verbose: DispatchMiddleware: Dispatching request...
+2025-11-17T04:27:03.878Z bc7ec47d-d1e2-4748-b0c8-012a9050c7ac info: DispatchMiddleware: Operation=Blob_Download
+2025-11-17T04:27:03.879Z bc7ec47d-d1e2-4748-b0c8-012a9050c7ac verbose: AuthenticationMiddlewareFactory:createAuthenticationMiddleware() Validating authentications.
+2025-11-17T04:27:03.879Z bc7ec47d-d1e2-4748-b0c8-012a9050c7ac info: PublicAccessAuthenticator:validate() Start validation against public access.
+2025-11-17T04:27:03.879Z bc7ec47d-d1e2-4748-b0c8-012a9050c7ac debug: PublicAccessAuthenticator:validate() Getting account properties...
+2025-11-17T04:27:03.879Z bc7ec47d-d1e2-4748-b0c8-012a9050c7ac debug: PublicAccessAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: quickstartblobs, blob: afd15fa1-95c6-4d68-8c2d-c650fe2c297e_photo.jpg
+2025-11-17T04:27:03.879Z bc7ec47d-d1e2-4748-b0c8-012a9050c7ac debug: PublicAccessAuthenticator:validate() Skip public access authentication. Cannot get public access type for container quickstartblobs
+2025-11-17T04:27:03.879Z bc7ec47d-d1e2-4748-b0c8-012a9050c7ac info: BlobSharedKeyAuthenticator:validate() Start validation against account shared key authentication.
+2025-11-17T04:27:03.879Z bc7ec47d-d1e2-4748-b0c8-012a9050c7ac info: BlobSharedKeyAuthenticator:validate() Request doesn't include valid authentication header. Skip shared key authentication.
+2025-11-17T04:27:03.879Z bc7ec47d-d1e2-4748-b0c8-012a9050c7ac info: AccountSASAuthenticator:validate() Start validation against account Shared Access Signature pattern.
+2025-11-17T04:27:03.879Z bc7ec47d-d1e2-4748-b0c8-012a9050c7ac debug: AccountSASAuthenticator:validate() Getting account properties...
+2025-11-17T04:27:03.879Z bc7ec47d-d1e2-4748-b0c8-012a9050c7ac debug: AccountSASAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: quickstartblobs, blob: afd15fa1-95c6-4d68-8c2d-c650fe2c297e_photo.jpg
+2025-11-17T04:27:03.879Z bc7ec47d-d1e2-4748-b0c8-012a9050c7ac debug: AccountSASAuthenticator:validate() Got account properties successfully.
+2025-11-17T04:27:03.879Z bc7ec47d-d1e2-4748-b0c8-012a9050c7ac debug: AccountSASAuthenticator:validate() Retrieved signature from URL parameter sig: QVQkJFcU5UoHmxcGtqkotGU+Aba6PBBkSR6bkpQFayY=
+2025-11-17T04:27:03.879Z bc7ec47d-d1e2-4748-b0c8-012a9050c7ac info: AccountSASAuthenticator:validate() Failed to get valid account SAS values from request.
+2025-11-17T04:27:03.879Z bc7ec47d-d1e2-4748-b0c8-012a9050c7ac info: BlobSASAuthenticator:validate() Start validation against blob service Shared Access Signature pattern.
+2025-11-17T04:27:03.879Z bc7ec47d-d1e2-4748-b0c8-012a9050c7ac debug: BlobSASAuthenticator:validate() Getting account properties...
+2025-11-17T04:27:03.879Z bc7ec47d-d1e2-4748-b0c8-012a9050c7ac debug: BlobSASAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: quickstartblobs, blob: afd15fa1-95c6-4d68-8c2d-c650fe2c297e_photo.jpg
+2025-11-17T04:27:03.879Z bc7ec47d-d1e2-4748-b0c8-012a9050c7ac debug: BlobSASAuthenticator:validate() Got account properties successfully.
+2025-11-17T04:27:03.879Z bc7ec47d-d1e2-4748-b0c8-012a9050c7ac debug: BlobSASAuthenticator:validate() Retrieved signature from URL parameter sig: QVQkJFcU5UoHmxcGtqkotGU+Aba6PBBkSR6bkpQFayY=
+2025-11-17T04:27:03.879Z bc7ec47d-d1e2-4748-b0c8-012a9050c7ac debug: BlobSASAuthenticator:validate() Signed resource type is c.
+2025-11-17T04:27:03.879Z bc7ec47d-d1e2-4748-b0c8-012a9050c7ac debug: BlobSASAuthenticator:validate() Successfully got valid blob service SAS values from request. {"version":"2025-07-05","startTime":"2025-11-17T04:27:03Z","expiryTime":"2025-11-17T05:27:03Z","permissions":"r","containerName":"quickstartblobs","blobName":"afd15fa1-95c6-4d68-8c2d-c650fe2c297e_photo.jpg","signedResource":"c"}
+2025-11-17T04:27:03.879Z bc7ec47d-d1e2-4748-b0c8-012a9050c7ac info: BlobSASAuthenticator:validate() Validate signature based account key1.
+2025-11-17T04:27:03.880Z bc7ec47d-d1e2-4748-b0c8-012a9050c7ac debug: BlobSASAuthenticator:validate() String to sign is: "r\n2025-11-17T04:27:03Z\n2025-11-17T05:27:03Z\n/blob/devstoreaccount1/quickstartblobs\n\n\n\n2025-07-05\nc\n\n\n\n\n\n\n"
+2025-11-17T04:27:03.880Z bc7ec47d-d1e2-4748-b0c8-012a9050c7ac debug: BlobSASAuthenticator:validate() Calculated signature is: QVQkJFcU5UoHmxcGtqkotGU+Aba6PBBkSR6bkpQFayY=
+2025-11-17T04:27:03.880Z bc7ec47d-d1e2-4748-b0c8-012a9050c7ac info: BlobSASAuthenticator:validate() Signature based on key1 validation passed.
+2025-11-17T04:27:03.880Z bc7ec47d-d1e2-4748-b0c8-012a9050c7ac info: BlobSASAuthenticator:validate() Validate start and expiry time.
+2025-11-17T04:27:03.880Z bc7ec47d-d1e2-4748-b0c8-012a9050c7ac info: BlobSASAuthenticator:validate() Validate IP range.
+2025-11-17T04:27:03.880Z bc7ec47d-d1e2-4748-b0c8-012a9050c7ac info: BlobSASAuthenticator:validate() Validate request protocol.
+2025-11-17T04:27:03.880Z bc7ec47d-d1e2-4748-b0c8-012a9050c7ac debug: BlobSASAuthenticator:validate() Got permission requirements for operation Blob_Download - {"permission":"r"}
+2025-11-17T04:27:03.880Z bc7ec47d-d1e2-4748-b0c8-012a9050c7ac info: BlobSASAuthenticator:validate() Blob service SAS validation successfully.
+2025-11-17T04:27:03.880Z bc7ec47d-d1e2-4748-b0c8-012a9050c7ac verbose: DeserializerMiddleware: Start deserializing...
+2025-11-17T04:27:03.880Z bc7ec47d-d1e2-4748-b0c8-012a9050c7ac info: HandlerMiddleware: DeserializedParameters={"options":{"leaseAccessConditions":{},"cpkInfo":{},"modifiedAccessConditions":{}}}
+2025-11-17T04:27:03.881Z bc7ec47d-d1e2-4748-b0c8-012a9050c7ac info: BlobHandler:downloadBlockBlobOrAppendBlob() NormalizedDownloadRange=bytes=0-2014280 RequiredContentLength=2014281
+2025-11-17T04:27:03.881Z bc7ec47d-d1e2-4748-b0c8-012a9050c7ac debug: OperationQueue.operate() Schedule incoming job f5454ecf-f74b-4158-acbd-410fd2569661
+2025-11-17T04:27:03.881Z bc7ec47d-d1e2-4748-b0c8-012a9050c7ac debug: OperationQueue:execute() Current runningConcurrency:0 maxConcurrency:100 operations.length:1
+2025-11-17T04:27:03.881Z bc7ec47d-d1e2-4748-b0c8-012a9050c7ac verbose: FSExtentStore:readExtent() Creating read stream. LocationId:Default extentId:43afe384-5cd1-4a6a-83b4-8b9f9a91d895 path:/data/__blobstorage__/43afe384-5cd1-4a6a-83b4-8b9f9a91d895 offset:4082517 count:2014281 end:6096797
+2025-11-17T04:27:03.881Z bc7ec47d-d1e2-4748-b0c8-012a9050c7ac debug: OperationQueue.operate() Job f5454ecf-f74b-4158-acbd-410fd2569661 completes callback, resolve.
+2025-11-17T04:27:03.881Z bc7ec47d-d1e2-4748-b0c8-012a9050c7ac verbose: SerializerMiddleware: Start serializing...
+2025-11-17T04:27:03.881Z bc7ec47d-d1e2-4748-b0c8-012a9050c7ac info: Serializer: Start returning stream body.
+2025-11-17T04:27:03.881Z bc7ec47d-d1e2-4748-b0c8-012a9050c7ac debug: OperationQueue:execute() Current runningConcurrency:0 maxConcurrency:100 operations.length:0
+2025-11-17T04:27:03.881Z bc7ec47d-d1e2-4748-b0c8-012a9050c7ac debug: OperationQueue:execute() return. Operation.length === 0
+2025-11-17T04:27:03.882Z ef88db04-fad6-4ba7-adc8-0bd9ed17bff5 verbose: FSExtentStore:readExtent() Read stream closed. LocationId:Default extentId:43afe384-5cd1-4a6a-83b4-8b9f9a91d895 path:/data/__blobstorage__/43afe384-5cd1-4a6a-83b4-8b9f9a91d895 offset:2058718 count:2023799 end:4082516
+2025-11-17T04:27:03.911Z bc7ec47d-d1e2-4748-b0c8-012a9050c7ac verbose: Send Blob telemetry: B_Blob_Download
+2025-11-17T04:27:03.911Z bc7ec47d-d1e2-4748-b0c8-012a9050c7ac info: EndMiddleware: End response. TotalTimeInMS=33 StatusCode=200 StatusMessage=OK Headers={"server":"Azurite-Blob/3.35.0","last-modified":"Sun, 16 Nov 2025 22:50:10 GMT","x-ms-creation-time":"Sun, 16 Nov 2025 22:50:10 GMT","content-length":"2014281","content-type":"application/octet-stream","etag":"\"0x2187210A222D560\"","content-md5":"GogcsTrcAAscMlPufiYfGA==","x-ms-blob-type":"BlockBlob","x-ms-lease-state":"available","x-ms-lease-status":"unlocked","x-ms-request-id":"bc7ec47d-d1e2-4748-b0c8-012a9050c7ac","x-ms-version":"2025-11-05","accept-ranges":"bytes","date":"Mon, 17 Nov 2025 04:27:03 GMT","x-ms-server-encrypted":"true","x-ms-blob-content-md5":"GogcsTrcAAscMlPufiYfGA=="}
+2025-11-17T04:27:03.911Z bc7ec47d-d1e2-4748-b0c8-012a9050c7ac verbose: FSExtentStore:readExtent() Read stream closed. LocationId:Default extentId:43afe384-5cd1-4a6a-83b4-8b9f9a91d895 path:/data/__blobstorage__/43afe384-5cd1-4a6a-83b4-8b9f9a91d895 offset:4082517 count:2014281 end:6096797
+2025-11-17T04:27:09.211Z 9265450b-414e-4510-8c27-8b8499ac87cb info: BlobStorageContextMiddleware: RequestMethod=GET RequestURL=http://192.168.15.11/devstoreaccount1/quickstartblobs/c56c5bd8-8c4c-4931-b0d7-5655f37a003a_photo.jpg?sv=2025-07-05&st=2025-11-17T04%3A27%3A09Z&se=2025-11-17T05%3A27%3A09Z&sr=c&sp=r&sig=UawUDl4C11uwJPcYLt4zYrURd0tSvptsYSTQRSr5dR8%3D RequestHeaders:{"host":"192.168.15.11:10000","accept":"*/*","accept-language":"pt-BR,pt;q=0.9","connection":"keep-alive","accept-encoding":"gzip, deflate","user-agent":"Expo/1017756 CFNetwork/3860.100.1 Darwin/25.0.0"} ClientIP=172.20.0.1 Protocol=http HTTPVersion=1.1
+2025-11-17T04:27:09.212Z 9265450b-414e-4510-8c27-8b8499ac87cb info: BlobStorageContextMiddleware: Account=devstoreaccount1 Container=quickstartblobs Blob=c56c5bd8-8c4c-4931-b0d7-5655f37a003a_photo.jpg
+2025-11-17T04:27:09.212Z 9265450b-414e-4510-8c27-8b8499ac87cb verbose: DispatchMiddleware: Dispatching request...
+2025-11-17T04:27:09.212Z 9265450b-414e-4510-8c27-8b8499ac87cb info: DispatchMiddleware: Operation=Blob_Download
+2025-11-17T04:27:09.212Z 9265450b-414e-4510-8c27-8b8499ac87cb verbose: AuthenticationMiddlewareFactory:createAuthenticationMiddleware() Validating authentications.
+2025-11-17T04:27:09.212Z 9265450b-414e-4510-8c27-8b8499ac87cb info: PublicAccessAuthenticator:validate() Start validation against public access.
+2025-11-17T04:27:09.212Z 9265450b-414e-4510-8c27-8b8499ac87cb debug: PublicAccessAuthenticator:validate() Getting account properties...
+2025-11-17T04:27:09.212Z 9265450b-414e-4510-8c27-8b8499ac87cb debug: PublicAccessAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: quickstartblobs, blob: c56c5bd8-8c4c-4931-b0d7-5655f37a003a_photo.jpg
+2025-11-17T04:27:09.212Z 9265450b-414e-4510-8c27-8b8499ac87cb debug: PublicAccessAuthenticator:validate() Skip public access authentication. Cannot get public access type for container quickstartblobs
+2025-11-17T04:27:09.212Z 9265450b-414e-4510-8c27-8b8499ac87cb info: BlobSharedKeyAuthenticator:validate() Start validation against account shared key authentication.
+2025-11-17T04:27:09.212Z 9265450b-414e-4510-8c27-8b8499ac87cb info: BlobSharedKeyAuthenticator:validate() Request doesn't include valid authentication header. Skip shared key authentication.
+2025-11-17T04:27:09.212Z 9265450b-414e-4510-8c27-8b8499ac87cb info: AccountSASAuthenticator:validate() Start validation against account Shared Access Signature pattern.
+2025-11-17T04:27:09.212Z 9265450b-414e-4510-8c27-8b8499ac87cb debug: AccountSASAuthenticator:validate() Getting account properties...
+2025-11-17T04:27:09.212Z 9265450b-414e-4510-8c27-8b8499ac87cb debug: AccountSASAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: quickstartblobs, blob: c56c5bd8-8c4c-4931-b0d7-5655f37a003a_photo.jpg
+2025-11-17T04:27:09.212Z 9265450b-414e-4510-8c27-8b8499ac87cb debug: AccountSASAuthenticator:validate() Got account properties successfully.
+2025-11-17T04:27:09.212Z 9265450b-414e-4510-8c27-8b8499ac87cb debug: AccountSASAuthenticator:validate() Retrieved signature from URL parameter sig: UawUDl4C11uwJPcYLt4zYrURd0tSvptsYSTQRSr5dR8=
+2025-11-17T04:27:09.212Z 9265450b-414e-4510-8c27-8b8499ac87cb info: AccountSASAuthenticator:validate() Failed to get valid account SAS values from request.
+2025-11-17T04:27:09.212Z 9265450b-414e-4510-8c27-8b8499ac87cb info: BlobSASAuthenticator:validate() Start validation against blob service Shared Access Signature pattern.
+2025-11-17T04:27:09.212Z 9265450b-414e-4510-8c27-8b8499ac87cb debug: BlobSASAuthenticator:validate() Getting account properties...
+2025-11-17T04:27:09.212Z 9265450b-414e-4510-8c27-8b8499ac87cb debug: BlobSASAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: quickstartblobs, blob: c56c5bd8-8c4c-4931-b0d7-5655f37a003a_photo.jpg
+2025-11-17T04:27:09.212Z 9265450b-414e-4510-8c27-8b8499ac87cb debug: BlobSASAuthenticator:validate() Got account properties successfully.
+2025-11-17T04:27:09.212Z 9265450b-414e-4510-8c27-8b8499ac87cb debug: BlobSASAuthenticator:validate() Retrieved signature from URL parameter sig: UawUDl4C11uwJPcYLt4zYrURd0tSvptsYSTQRSr5dR8=
+2025-11-17T04:27:09.212Z 9265450b-414e-4510-8c27-8b8499ac87cb debug: BlobSASAuthenticator:validate() Signed resource type is c.
+2025-11-17T04:27:09.212Z 9265450b-414e-4510-8c27-8b8499ac87cb debug: BlobSASAuthenticator:validate() Successfully got valid blob service SAS values from request. {"version":"2025-07-05","startTime":"2025-11-17T04:27:09Z","expiryTime":"2025-11-17T05:27:09Z","permissions":"r","containerName":"quickstartblobs","blobName":"c56c5bd8-8c4c-4931-b0d7-5655f37a003a_photo.jpg","signedResource":"c"}
+2025-11-17T04:27:09.212Z 9265450b-414e-4510-8c27-8b8499ac87cb info: BlobSASAuthenticator:validate() Validate signature based account key1.
+2025-11-17T04:27:09.212Z 9265450b-414e-4510-8c27-8b8499ac87cb debug: BlobSASAuthenticator:validate() String to sign is: "r\n2025-11-17T04:27:09Z\n2025-11-17T05:27:09Z\n/blob/devstoreaccount1/quickstartblobs\n\n\n\n2025-07-05\nc\n\n\n\n\n\n\n"
+2025-11-17T04:27:09.212Z 9265450b-414e-4510-8c27-8b8499ac87cb debug: BlobSASAuthenticator:validate() Calculated signature is: UawUDl4C11uwJPcYLt4zYrURd0tSvptsYSTQRSr5dR8=
+2025-11-17T04:27:09.212Z 9265450b-414e-4510-8c27-8b8499ac87cb info: BlobSASAuthenticator:validate() Signature based on key1 validation passed.
+2025-11-17T04:27:09.212Z 9265450b-414e-4510-8c27-8b8499ac87cb info: BlobSASAuthenticator:validate() Validate start and expiry time.
+2025-11-17T04:27:09.212Z 9265450b-414e-4510-8c27-8b8499ac87cb info: BlobSASAuthenticator:validate() Validate IP range.
+2025-11-17T04:27:09.212Z 9265450b-414e-4510-8c27-8b8499ac87cb info: BlobSASAuthenticator:validate() Validate request protocol.
+2025-11-17T04:27:09.212Z 9265450b-414e-4510-8c27-8b8499ac87cb debug: BlobSASAuthenticator:validate() Got permission requirements for operation Blob_Download - {"permission":"r"}
+2025-11-17T04:27:09.212Z 9265450b-414e-4510-8c27-8b8499ac87cb info: BlobSASAuthenticator:validate() Blob service SAS validation successfully.
+2025-11-17T04:27:09.212Z 9265450b-414e-4510-8c27-8b8499ac87cb verbose: DeserializerMiddleware: Start deserializing...
+2025-11-17T04:27:09.213Z 9265450b-414e-4510-8c27-8b8499ac87cb info: HandlerMiddleware: DeserializedParameters={"options":{"leaseAccessConditions":{},"cpkInfo":{},"modifiedAccessConditions":{}}}
+2025-11-17T04:27:09.213Z 9265450b-414e-4510-8c27-8b8499ac87cb info: BlobHandler:downloadBlockBlobOrAppendBlob() NormalizedDownloadRange=bytes=0-2033376 RequiredContentLength=2033377
+2025-11-17T04:27:09.213Z 9265450b-414e-4510-8c27-8b8499ac87cb debug: OperationQueue.operate() Schedule incoming job 7fe3fc4e-2c23-42ee-85a0-8d3b210d54b1
+2025-11-17T04:27:09.213Z 9265450b-414e-4510-8c27-8b8499ac87cb debug: OperationQueue:execute() Current runningConcurrency:0 maxConcurrency:100 operations.length:1
+2025-11-17T04:27:09.213Z 9265450b-414e-4510-8c27-8b8499ac87cb verbose: FSExtentStore:readExtent() Creating read stream. LocationId:Default extentId:c71dc006-32b3-4f57-b36f-0768497c9495 path:/data/__blobstorage__/c71dc006-32b3-4f57-b36f-0768497c9495 offset:0 count:2033377 end:2033376
+2025-11-17T04:27:09.213Z 9265450b-414e-4510-8c27-8b8499ac87cb debug: OperationQueue.operate() Job 7fe3fc4e-2c23-42ee-85a0-8d3b210d54b1 completes callback, resolve.
+2025-11-17T04:27:09.213Z 9265450b-414e-4510-8c27-8b8499ac87cb verbose: SerializerMiddleware: Start serializing...
+2025-11-17T04:27:09.213Z 9265450b-414e-4510-8c27-8b8499ac87cb info: Serializer: Start returning stream body.
+2025-11-17T04:27:09.213Z 9265450b-414e-4510-8c27-8b8499ac87cb debug: OperationQueue:execute() Current runningConcurrency:0 maxConcurrency:100 operations.length:0
+2025-11-17T04:27:09.213Z 9265450b-414e-4510-8c27-8b8499ac87cb debug: OperationQueue:execute() return. Operation.length === 0
+2025-11-17T04:27:09.253Z 9265450b-414e-4510-8c27-8b8499ac87cb verbose: Send Blob telemetry: B_Blob_Download
+2025-11-17T04:27:09.254Z 9265450b-414e-4510-8c27-8b8499ac87cb info: EndMiddleware: End response. TotalTimeInMS=42 StatusCode=200 StatusMessage=OK Headers={"server":"Azurite-Blob/3.35.0","last-modified":"Mon, 17 Nov 2025 03:25:00 GMT","x-ms-creation-time":"Mon, 17 Nov 2025 03:25:00 GMT","content-length":"2033377","content-type":"application/octet-stream","etag":"\"0x1BFBAEFE34DB500\"","content-md5":"lJZ7Sdif6YY71WRkABoTwQ==","x-ms-blob-type":"BlockBlob","x-ms-lease-state":"available","x-ms-lease-status":"unlocked","x-ms-request-id":"9265450b-414e-4510-8c27-8b8499ac87cb","x-ms-version":"2025-11-05","accept-ranges":"bytes","date":"Mon, 17 Nov 2025 04:27:09 GMT","x-ms-server-encrypted":"true","x-ms-blob-content-md5":"lJZ7Sdif6YY71WRkABoTwQ=="}
+2025-11-17T04:27:09.254Z 9265450b-414e-4510-8c27-8b8499ac87cb verbose: FSExtentStore:readExtent() Read stream closed. LocationId:Default extentId:c71dc006-32b3-4f57-b36f-0768497c9495 path:/data/__blobstorage__/c71dc006-32b3-4f57-b36f-0768497c9495 offset:0 count:2033377 end:2033376
+2025-11-17T04:27:16.010Z b29d8531-742e-4e59-be1c-a49b2b5b211f info: BlobStorageContextMiddleware: RequestMethod=GET RequestURL=http://192.168.15.11/devstoreaccount1/quickstartblobs/458766d1-e5e5-4dbb-adf1-26f5df739ba4_photo.jpg?sv=2025-07-05&st=2025-11-17T04%3A27%3A14Z&se=2025-11-17T05%3A27%3A14Z&sr=c&sp=r&sig=A%2BQ8ITxoc73QwdIcRPnPwV58ux2hS9ZLhobrGrYuN1s%3D RequestHeaders:{"host":"192.168.15.11:10000","accept":"*/*","accept-language":"pt-BR,pt;q=0.9","connection":"keep-alive","accept-encoding":"gzip, deflate","user-agent":"Expo/1017756 CFNetwork/3860.100.1 Darwin/25.0.0"} ClientIP=172.20.0.1 Protocol=http HTTPVersion=1.1
+2025-11-17T04:27:16.010Z b29d8531-742e-4e59-be1c-a49b2b5b211f info: BlobStorageContextMiddleware: Account=devstoreaccount1 Container=quickstartblobs Blob=458766d1-e5e5-4dbb-adf1-26f5df739ba4_photo.jpg
+2025-11-17T04:27:16.010Z b29d8531-742e-4e59-be1c-a49b2b5b211f verbose: DispatchMiddleware: Dispatching request...
+2025-11-17T04:27:16.010Z b29d8531-742e-4e59-be1c-a49b2b5b211f info: DispatchMiddleware: Operation=Blob_Download
+2025-11-17T04:27:16.011Z b29d8531-742e-4e59-be1c-a49b2b5b211f verbose: AuthenticationMiddlewareFactory:createAuthenticationMiddleware() Validating authentications.
+2025-11-17T04:27:16.011Z b29d8531-742e-4e59-be1c-a49b2b5b211f info: PublicAccessAuthenticator:validate() Start validation against public access.
+2025-11-17T04:27:16.011Z b29d8531-742e-4e59-be1c-a49b2b5b211f debug: PublicAccessAuthenticator:validate() Getting account properties...
+2025-11-17T04:27:16.011Z b29d8531-742e-4e59-be1c-a49b2b5b211f debug: PublicAccessAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: quickstartblobs, blob: 458766d1-e5e5-4dbb-adf1-26f5df739ba4_photo.jpg
+2025-11-17T04:27:16.011Z b29d8531-742e-4e59-be1c-a49b2b5b211f debug: PublicAccessAuthenticator:validate() Skip public access authentication. Cannot get public access type for container quickstartblobs
+2025-11-17T04:27:16.011Z b29d8531-742e-4e59-be1c-a49b2b5b211f info: BlobSharedKeyAuthenticator:validate() Start validation against account shared key authentication.
+2025-11-17T04:27:16.011Z b29d8531-742e-4e59-be1c-a49b2b5b211f info: BlobSharedKeyAuthenticator:validate() Request doesn't include valid authentication header. Skip shared key authentication.
+2025-11-17T04:27:16.011Z b29d8531-742e-4e59-be1c-a49b2b5b211f info: AccountSASAuthenticator:validate() Start validation against account Shared Access Signature pattern.
+2025-11-17T04:27:16.011Z b29d8531-742e-4e59-be1c-a49b2b5b211f debug: AccountSASAuthenticator:validate() Getting account properties...
+2025-11-17T04:27:16.011Z b29d8531-742e-4e59-be1c-a49b2b5b211f debug: AccountSASAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: quickstartblobs, blob: 458766d1-e5e5-4dbb-adf1-26f5df739ba4_photo.jpg
+2025-11-17T04:27:16.011Z b29d8531-742e-4e59-be1c-a49b2b5b211f debug: AccountSASAuthenticator:validate() Got account properties successfully.
+2025-11-17T04:27:16.011Z b29d8531-742e-4e59-be1c-a49b2b5b211f debug: AccountSASAuthenticator:validate() Retrieved signature from URL parameter sig: A+Q8ITxoc73QwdIcRPnPwV58ux2hS9ZLhobrGrYuN1s=
+2025-11-17T04:27:16.011Z b29d8531-742e-4e59-be1c-a49b2b5b211f info: AccountSASAuthenticator:validate() Failed to get valid account SAS values from request.
+2025-11-17T04:27:16.011Z b29d8531-742e-4e59-be1c-a49b2b5b211f info: BlobSASAuthenticator:validate() Start validation against blob service Shared Access Signature pattern.
+2025-11-17T04:27:16.011Z b29d8531-742e-4e59-be1c-a49b2b5b211f debug: BlobSASAuthenticator:validate() Getting account properties...
+2025-11-17T04:27:16.011Z b29d8531-742e-4e59-be1c-a49b2b5b211f debug: BlobSASAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: quickstartblobs, blob: 458766d1-e5e5-4dbb-adf1-26f5df739ba4_photo.jpg
+2025-11-17T04:27:16.011Z b29d8531-742e-4e59-be1c-a49b2b5b211f debug: BlobSASAuthenticator:validate() Got account properties successfully.
+2025-11-17T04:27:16.011Z b29d8531-742e-4e59-be1c-a49b2b5b211f debug: BlobSASAuthenticator:validate() Retrieved signature from URL parameter sig: A+Q8ITxoc73QwdIcRPnPwV58ux2hS9ZLhobrGrYuN1s=
+2025-11-17T04:27:16.011Z b29d8531-742e-4e59-be1c-a49b2b5b211f debug: BlobSASAuthenticator:validate() Signed resource type is c.
+2025-11-17T04:27:16.012Z b29d8531-742e-4e59-be1c-a49b2b5b211f debug: BlobSASAuthenticator:validate() Successfully got valid blob service SAS values from request. {"version":"2025-07-05","startTime":"2025-11-17T04:27:14Z","expiryTime":"2025-11-17T05:27:14Z","permissions":"r","containerName":"quickstartblobs","blobName":"458766d1-e5e5-4dbb-adf1-26f5df739ba4_photo.jpg","signedResource":"c"}
+2025-11-17T04:27:16.012Z b29d8531-742e-4e59-be1c-a49b2b5b211f info: BlobSASAuthenticator:validate() Validate signature based account key1.
+2025-11-17T04:27:16.012Z b29d8531-742e-4e59-be1c-a49b2b5b211f debug: BlobSASAuthenticator:validate() String to sign is: "r\n2025-11-17T04:27:14Z\n2025-11-17T05:27:14Z\n/blob/devstoreaccount1/quickstartblobs\n\n\n\n2025-07-05\nc\n\n\n\n\n\n\n"
+2025-11-17T04:27:16.012Z b29d8531-742e-4e59-be1c-a49b2b5b211f debug: BlobSASAuthenticator:validate() Calculated signature is: A+Q8ITxoc73QwdIcRPnPwV58ux2hS9ZLhobrGrYuN1s=
+2025-11-17T04:27:16.012Z b29d8531-742e-4e59-be1c-a49b2b5b211f info: BlobSASAuthenticator:validate() Signature based on key1 validation passed.
+2025-11-17T04:27:16.012Z b29d8531-742e-4e59-be1c-a49b2b5b211f info: BlobSASAuthenticator:validate() Validate start and expiry time.
+2025-11-17T04:27:16.012Z b29d8531-742e-4e59-be1c-a49b2b5b211f info: BlobSASAuthenticator:validate() Validate IP range.
+2025-11-17T04:27:16.012Z b29d8531-742e-4e59-be1c-a49b2b5b211f info: BlobSASAuthenticator:validate() Validate request protocol.
+2025-11-17T04:27:16.012Z b29d8531-742e-4e59-be1c-a49b2b5b211f debug: BlobSASAuthenticator:validate() Got permission requirements for operation Blob_Download - {"permission":"r"}
+2025-11-17T04:27:16.012Z b29d8531-742e-4e59-be1c-a49b2b5b211f info: BlobSASAuthenticator:validate() Blob service SAS validation successfully.
+2025-11-17T04:27:16.012Z b29d8531-742e-4e59-be1c-a49b2b5b211f verbose: DeserializerMiddleware: Start deserializing...
+2025-11-17T04:27:16.012Z b29d8531-742e-4e59-be1c-a49b2b5b211f info: HandlerMiddleware: DeserializedParameters={"options":{"leaseAccessConditions":{},"cpkInfo":{},"modifiedAccessConditions":{}}}
+2025-11-17T04:27:16.012Z b29d8531-742e-4e59-be1c-a49b2b5b211f info: BlobHandler:downloadBlockBlobOrAppendBlob() NormalizedDownloadRange=bytes=0-2058717 RequiredContentLength=2058718
+2025-11-17T04:27:16.013Z b29d8531-742e-4e59-be1c-a49b2b5b211f debug: OperationQueue.operate() Schedule incoming job a0432f22-3922-4c56-9801-20a9a8f1cc50
+2025-11-17T04:27:16.013Z b29d8531-742e-4e59-be1c-a49b2b5b211f debug: OperationQueue:execute() Current runningConcurrency:0 maxConcurrency:100 operations.length:1
+2025-11-17T04:27:16.013Z b29d8531-742e-4e59-be1c-a49b2b5b211f verbose: FSExtentStore:readExtent() Creating read stream. LocationId:Default extentId:43afe384-5cd1-4a6a-83b4-8b9f9a91d895 path:/data/__blobstorage__/43afe384-5cd1-4a6a-83b4-8b9f9a91d895 offset:0 count:2058718 end:2058717
+2025-11-17T04:27:16.013Z b29d8531-742e-4e59-be1c-a49b2b5b211f debug: OperationQueue.operate() Job a0432f22-3922-4c56-9801-20a9a8f1cc50 completes callback, resolve.
+2025-11-17T04:27:16.013Z b29d8531-742e-4e59-be1c-a49b2b5b211f verbose: SerializerMiddleware: Start serializing...
+2025-11-17T04:27:16.013Z b29d8531-742e-4e59-be1c-a49b2b5b211f info: Serializer: Start returning stream body.
+2025-11-17T04:27:16.014Z b29d8531-742e-4e59-be1c-a49b2b5b211f debug: OperationQueue:execute() Current runningConcurrency:0 maxConcurrency:100 operations.length:0
+2025-11-17T04:27:16.014Z b29d8531-742e-4e59-be1c-a49b2b5b211f debug: OperationQueue:execute() return. Operation.length === 0
+2025-11-17T04:27:16.128Z b29d8531-742e-4e59-be1c-a49b2b5b211f verbose: Send Blob telemetry: B_Blob_Download
+2025-11-17T04:27:16.128Z b29d8531-742e-4e59-be1c-a49b2b5b211f info: EndMiddleware: End response. TotalTimeInMS=119 StatusCode=200 StatusMessage=OK Headers={"server":"Azurite-Blob/3.35.0","last-modified":"Sun, 16 Nov 2025 22:47:50 GMT","x-ms-creation-time":"Sun, 16 Nov 2025 22:47:50 GMT","content-length":"2058718","content-type":"application/octet-stream","etag":"\"0x1DC8172B5144DA0\"","content-md5":"26HMo+PHPYm8qcM4WvM8Pg==","x-ms-blob-type":"BlockBlob","x-ms-lease-state":"available","x-ms-lease-status":"unlocked","x-ms-request-id":"b29d8531-742e-4e59-be1c-a49b2b5b211f","x-ms-version":"2025-11-05","accept-ranges":"bytes","date":"Mon, 17 Nov 2025 04:27:16 GMT","x-ms-server-encrypted":"true","x-ms-blob-content-md5":"26HMo+PHPYm8qcM4WvM8Pg=="}
+2025-11-17T04:27:16.128Z b29d8531-742e-4e59-be1c-a49b2b5b211f verbose: FSExtentStore:readExtent() Read stream closed. LocationId:Default extentId:43afe384-5cd1-4a6a-83b4-8b9f9a91d895 path:/data/__blobstorage__/43afe384-5cd1-4a6a-83b4-8b9f9a91d895 offset:0 count:2058718 end:2058717
+2025-11-17T04:27:18.885Z f713676a-4eb7-454c-9c1b-27658d1b41d7 info: BlobStorageContextMiddleware: RequestMethod=GET RequestURL=http://192.168.15.11/devstoreaccount1/quickstartblobs/0f75214d-2999-477f-b50a-0a2bd3afa986_Predator_Wallpaper_01_3840x2400.jpg?sv=2025-07-05&st=2025-11-17T04%3A27%3A18Z&se=2025-11-17T05%3A27%3A18Z&sr=c&sp=r&sig=peHBOG4LNI9fnyqJC5ugT%2ByPmQEeT8oSzJGkCQ3ncxI%3D RequestHeaders:{"host":"192.168.15.11:10000","accept":"*/*","accept-language":"pt-BR,pt;q=0.9","connection":"keep-alive","accept-encoding":"gzip, deflate","user-agent":"Expo/1017756 CFNetwork/3860.100.1 Darwin/25.0.0"} ClientIP=172.20.0.1 Protocol=http HTTPVersion=1.1
+2025-11-17T04:27:18.885Z f713676a-4eb7-454c-9c1b-27658d1b41d7 info: BlobStorageContextMiddleware: Account=devstoreaccount1 Container=quickstartblobs Blob=0f75214d-2999-477f-b50a-0a2bd3afa986_Predator_Wallpaper_01_3840x2400.jpg
+2025-11-17T04:27:18.885Z f713676a-4eb7-454c-9c1b-27658d1b41d7 verbose: DispatchMiddleware: Dispatching request...
+2025-11-17T04:27:18.885Z f713676a-4eb7-454c-9c1b-27658d1b41d7 info: DispatchMiddleware: Operation=Blob_Download
+2025-11-17T04:27:18.886Z f713676a-4eb7-454c-9c1b-27658d1b41d7 verbose: AuthenticationMiddlewareFactory:createAuthenticationMiddleware() Validating authentications.
+2025-11-17T04:27:18.886Z f713676a-4eb7-454c-9c1b-27658d1b41d7 info: PublicAccessAuthenticator:validate() Start validation against public access.
+2025-11-17T04:27:18.886Z f713676a-4eb7-454c-9c1b-27658d1b41d7 debug: PublicAccessAuthenticator:validate() Getting account properties...
+2025-11-17T04:27:18.886Z f713676a-4eb7-454c-9c1b-27658d1b41d7 debug: PublicAccessAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: quickstartblobs, blob: 0f75214d-2999-477f-b50a-0a2bd3afa986_Predator_Wallpaper_01_3840x2400.jpg
+2025-11-17T04:27:18.887Z f713676a-4eb7-454c-9c1b-27658d1b41d7 debug: PublicAccessAuthenticator:validate() Skip public access authentication. Cannot get public access type for container quickstartblobs
+2025-11-17T04:27:18.887Z f713676a-4eb7-454c-9c1b-27658d1b41d7 info: BlobSharedKeyAuthenticator:validate() Start validation against account shared key authentication.
+2025-11-17T04:27:18.887Z f713676a-4eb7-454c-9c1b-27658d1b41d7 info: BlobSharedKeyAuthenticator:validate() Request doesn't include valid authentication header. Skip shared key authentication.
+2025-11-17T04:27:18.887Z f713676a-4eb7-454c-9c1b-27658d1b41d7 info: AccountSASAuthenticator:validate() Start validation against account Shared Access Signature pattern.
+2025-11-17T04:27:18.887Z f713676a-4eb7-454c-9c1b-27658d1b41d7 debug: AccountSASAuthenticator:validate() Getting account properties...
+2025-11-17T04:27:18.887Z f713676a-4eb7-454c-9c1b-27658d1b41d7 debug: AccountSASAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: quickstartblobs, blob: 0f75214d-2999-477f-b50a-0a2bd3afa986_Predator_Wallpaper_01_3840x2400.jpg
+2025-11-17T04:27:18.887Z f713676a-4eb7-454c-9c1b-27658d1b41d7 debug: AccountSASAuthenticator:validate() Got account properties successfully.
+2025-11-17T04:27:18.887Z f713676a-4eb7-454c-9c1b-27658d1b41d7 debug: AccountSASAuthenticator:validate() Retrieved signature from URL parameter sig: peHBOG4LNI9fnyqJC5ugT+yPmQEeT8oSzJGkCQ3ncxI=
+2025-11-17T04:27:18.887Z f713676a-4eb7-454c-9c1b-27658d1b41d7 info: AccountSASAuthenticator:validate() Failed to get valid account SAS values from request.
+2025-11-17T04:27:18.887Z f713676a-4eb7-454c-9c1b-27658d1b41d7 info: BlobSASAuthenticator:validate() Start validation against blob service Shared Access Signature pattern.
+2025-11-17T04:27:18.887Z f713676a-4eb7-454c-9c1b-27658d1b41d7 debug: BlobSASAuthenticator:validate() Getting account properties...
+2025-11-17T04:27:18.887Z f713676a-4eb7-454c-9c1b-27658d1b41d7 debug: BlobSASAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: quickstartblobs, blob: 0f75214d-2999-477f-b50a-0a2bd3afa986_Predator_Wallpaper_01_3840x2400.jpg
+2025-11-17T04:27:18.887Z f713676a-4eb7-454c-9c1b-27658d1b41d7 debug: BlobSASAuthenticator:validate() Got account properties successfully.
+2025-11-17T04:27:18.887Z f713676a-4eb7-454c-9c1b-27658d1b41d7 debug: BlobSASAuthenticator:validate() Retrieved signature from URL parameter sig: peHBOG4LNI9fnyqJC5ugT+yPmQEeT8oSzJGkCQ3ncxI=
+2025-11-17T04:27:18.887Z f713676a-4eb7-454c-9c1b-27658d1b41d7 debug: BlobSASAuthenticator:validate() Signed resource type is c.
+2025-11-17T04:27:18.887Z f713676a-4eb7-454c-9c1b-27658d1b41d7 debug: BlobSASAuthenticator:validate() Successfully got valid blob service SAS values from request. {"version":"2025-07-05","startTime":"2025-11-17T04:27:18Z","expiryTime":"2025-11-17T05:27:18Z","permissions":"r","containerName":"quickstartblobs","blobName":"0f75214d-2999-477f-b50a-0a2bd3afa986_Predator_Wallpaper_01_3840x2400.jpg","signedResource":"c"}
+2025-11-17T04:27:18.887Z f713676a-4eb7-454c-9c1b-27658d1b41d7 info: BlobSASAuthenticator:validate() Validate signature based account key1.
+2025-11-17T04:27:18.887Z f713676a-4eb7-454c-9c1b-27658d1b41d7 debug: BlobSASAuthenticator:validate() String to sign is: "r\n2025-11-17T04:27:18Z\n2025-11-17T05:27:18Z\n/blob/devstoreaccount1/quickstartblobs\n\n\n\n2025-07-05\nc\n\n\n\n\n\n\n"
+2025-11-17T04:27:18.887Z f713676a-4eb7-454c-9c1b-27658d1b41d7 debug: BlobSASAuthenticator:validate() Calculated signature is: peHBOG4LNI9fnyqJC5ugT+yPmQEeT8oSzJGkCQ3ncxI=
+2025-11-17T04:27:18.887Z f713676a-4eb7-454c-9c1b-27658d1b41d7 info: BlobSASAuthenticator:validate() Signature based on key1 validation passed.
+2025-11-17T04:27:18.887Z f713676a-4eb7-454c-9c1b-27658d1b41d7 info: BlobSASAuthenticator:validate() Validate start and expiry time.
+2025-11-17T04:27:18.887Z f713676a-4eb7-454c-9c1b-27658d1b41d7 info: BlobSASAuthenticator:validate() Validate IP range.
+2025-11-17T04:27:18.887Z f713676a-4eb7-454c-9c1b-27658d1b41d7 info: BlobSASAuthenticator:validate() Validate request protocol.
+2025-11-17T04:27:18.887Z f713676a-4eb7-454c-9c1b-27658d1b41d7 debug: BlobSASAuthenticator:validate() Got permission requirements for operation Blob_Download - {"permission":"r"}
+2025-11-17T04:27:18.887Z f713676a-4eb7-454c-9c1b-27658d1b41d7 info: BlobSASAuthenticator:validate() Blob service SAS validation successfully.
+2025-11-17T04:27:18.887Z f713676a-4eb7-454c-9c1b-27658d1b41d7 verbose: DeserializerMiddleware: Start deserializing...
+2025-11-17T04:27:18.888Z f713676a-4eb7-454c-9c1b-27658d1b41d7 info: HandlerMiddleware: DeserializedParameters={"options":{"leaseAccessConditions":{},"cpkInfo":{},"modifiedAccessConditions":{}}}
+2025-11-17T04:27:18.888Z f713676a-4eb7-454c-9c1b-27658d1b41d7 info: BlobHandler:downloadBlockBlobOrAppendBlob() NormalizedDownloadRange=bytes=0-7803880 RequiredContentLength=7803881
+2025-11-17T04:27:18.888Z f713676a-4eb7-454c-9c1b-27658d1b41d7 debug: OperationQueue.operate() Schedule incoming job a317d8b6-4dd5-43f8-9bb6-29e751606636
+2025-11-17T04:27:18.888Z f713676a-4eb7-454c-9c1b-27658d1b41d7 debug: OperationQueue:execute() Current runningConcurrency:0 maxConcurrency:100 operations.length:1
+2025-11-17T04:27:18.889Z f713676a-4eb7-454c-9c1b-27658d1b41d7 verbose: FSExtentStore:readExtent() Creating read stream. LocationId:Default extentId:60a870cd-5823-4e4f-b612-ae48104ffbd3 path:/data/__blobstorage__/60a870cd-5823-4e4f-b612-ae48104ffbd3 offset:0 count:7803881 end:7803880
+2025-11-17T04:27:18.889Z f713676a-4eb7-454c-9c1b-27658d1b41d7 debug: OperationQueue.operate() Job a317d8b6-4dd5-43f8-9bb6-29e751606636 completes callback, resolve.
+2025-11-17T04:27:18.889Z f713676a-4eb7-454c-9c1b-27658d1b41d7 verbose: SerializerMiddleware: Start serializing...
+2025-11-17T04:27:18.889Z f713676a-4eb7-454c-9c1b-27658d1b41d7 info: Serializer: Start returning stream body.
+2025-11-17T04:27:18.889Z f713676a-4eb7-454c-9c1b-27658d1b41d7 debug: OperationQueue:execute() Current runningConcurrency:0 maxConcurrency:100 operations.length:0
+2025-11-17T04:27:18.889Z f713676a-4eb7-454c-9c1b-27658d1b41d7 debug: OperationQueue:execute() return. Operation.length === 0
+2025-11-17T04:27:19.008Z f713676a-4eb7-454c-9c1b-27658d1b41d7 verbose: Send Blob telemetry: B_Blob_Download
+2025-11-17T04:27:19.008Z f713676a-4eb7-454c-9c1b-27658d1b41d7 info: EndMiddleware: End response. TotalTimeInMS=123 StatusCode=200 StatusMessage=OK Headers={"server":"Azurite-Blob/3.35.0","last-modified":"Sun, 16 Nov 2025 21:25:01 GMT","x-ms-creation-time":"Sun, 16 Nov 2025 21:25:01 GMT","content-length":"7803881","content-type":"application/octet-stream","etag":"\"0x1D6A0CC5D274FB0\"","content-md5":"kRgbHIDX6kwL77eL2ocKXw==","x-ms-blob-type":"BlockBlob","x-ms-lease-state":"available","x-ms-lease-status":"unlocked","x-ms-request-id":"f713676a-4eb7-454c-9c1b-27658d1b41d7","x-ms-version":"2025-11-05","accept-ranges":"bytes","date":"Mon, 17 Nov 2025 04:27:18 GMT","x-ms-server-encrypted":"true","x-ms-blob-content-md5":"kRgbHIDX6kwL77eL2ocKXw=="}
+2025-11-17T04:27:19.008Z f713676a-4eb7-454c-9c1b-27658d1b41d7 verbose: FSExtentStore:readExtent() Read stream closed. LocationId:Default extentId:60a870cd-5823-4e4f-b612-ae48104ffbd3 path:/data/__blobstorage__/60a870cd-5823-4e4f-b612-ae48104ffbd3 offset:0 count:7803881 end:7803880
+2025-11-17T04:27:22.024Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2025-11-17T04:27:22.024Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2025-11-17T04:27:22.230Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2025-11-17T04:27:22.230Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2025-11-17T04:27:22.450Z 	 info: QueueGCManager:markSweepLoop() Start new mark and sweep.
+2025-11-17T04:27:22.451Z 	 info: QueueGCManger:markSweep() Get all extents.
+2025-11-17T04:27:22.451Z 	 info: QueueGCManager:marksweep() Get 0 extents.
+2025-11-17T04:27:22.451Z 	 info: QueueGCManager:markSweep() Get referred extents, then remove from allExtents.
+2025-11-17T04:27:22.452Z 	 info: QueueGCManager:markSweep() Got referred extents, unreferenced extents count is 0.
+2025-11-17T04:27:22.452Z 	 info: QueueGCManager:markSweepLoop() Mark and sweep finished, take 1ms.
+2025-11-17T04:27:22.452Z 	 info: QueueGCManager:markSweepLoop() Sleep for 60000
+2025-11-17T04:27:22.454Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2025-11-17T04:27:22.454Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2025-11-17T04:27:25.979Z e23ba54e-92a9-4c4c-91e4-80b29144ae21 info: BlobStorageContextMiddleware: RequestMethod=GET RequestURL=http://192.168.15.11/devstoreaccount1/quickstartblobs/17b43b4a-d0fd-42a3-bda4-708870117e8d_photo.jpg?sv=2025-07-05&st=2025-11-17T04%3A27%3A25Z&se=2025-11-17T05%3A27%3A25Z&sr=c&sp=r&sig=234maeRdNNrJvnqnO4xR0hEZU1lNVbk%2B97PdLJX%2FnkE%3D RequestHeaders:{"host":"192.168.15.11:10000","accept":"*/*","accept-language":"pt-BR,pt;q=0.9","connection":"keep-alive","accept-encoding":"gzip, deflate","user-agent":"Expo/1017756 CFNetwork/3860.100.1 Darwin/25.0.0"} ClientIP=172.20.0.1 Protocol=http HTTPVersion=1.1
+2025-11-17T04:27:25.979Z e23ba54e-92a9-4c4c-91e4-80b29144ae21 info: BlobStorageContextMiddleware: Account=devstoreaccount1 Container=quickstartblobs Blob=17b43b4a-d0fd-42a3-bda4-708870117e8d_photo.jpg
+2025-11-17T04:27:25.979Z e23ba54e-92a9-4c4c-91e4-80b29144ae21 verbose: DispatchMiddleware: Dispatching request...
+2025-11-17T04:27:25.980Z e23ba54e-92a9-4c4c-91e4-80b29144ae21 info: DispatchMiddleware: Operation=Blob_Download
+2025-11-17T04:27:25.980Z e23ba54e-92a9-4c4c-91e4-80b29144ae21 verbose: AuthenticationMiddlewareFactory:createAuthenticationMiddleware() Validating authentications.
+2025-11-17T04:27:25.980Z e23ba54e-92a9-4c4c-91e4-80b29144ae21 info: PublicAccessAuthenticator:validate() Start validation against public access.
+2025-11-17T04:27:25.980Z e23ba54e-92a9-4c4c-91e4-80b29144ae21 debug: PublicAccessAuthenticator:validate() Getting account properties...
+2025-11-17T04:27:25.980Z e23ba54e-92a9-4c4c-91e4-80b29144ae21 debug: PublicAccessAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: quickstartblobs, blob: 17b43b4a-d0fd-42a3-bda4-708870117e8d_photo.jpg
+2025-11-17T04:27:25.980Z e23ba54e-92a9-4c4c-91e4-80b29144ae21 debug: PublicAccessAuthenticator:validate() Skip public access authentication. Cannot get public access type for container quickstartblobs
+2025-11-17T04:27:25.980Z e23ba54e-92a9-4c4c-91e4-80b29144ae21 info: BlobSharedKeyAuthenticator:validate() Start validation against account shared key authentication.
+2025-11-17T04:27:25.980Z e23ba54e-92a9-4c4c-91e4-80b29144ae21 info: BlobSharedKeyAuthenticator:validate() Request doesn't include valid authentication header. Skip shared key authentication.
+2025-11-17T04:27:25.980Z e23ba54e-92a9-4c4c-91e4-80b29144ae21 info: AccountSASAuthenticator:validate() Start validation against account Shared Access Signature pattern.
+2025-11-17T04:27:25.980Z e23ba54e-92a9-4c4c-91e4-80b29144ae21 debug: AccountSASAuthenticator:validate() Getting account properties...
+2025-11-17T04:27:25.980Z e23ba54e-92a9-4c4c-91e4-80b29144ae21 debug: AccountSASAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: quickstartblobs, blob: 17b43b4a-d0fd-42a3-bda4-708870117e8d_photo.jpg
+2025-11-17T04:27:25.980Z e23ba54e-92a9-4c4c-91e4-80b29144ae21 debug: AccountSASAuthenticator:validate() Got account properties successfully.
+2025-11-17T04:27:25.980Z e23ba54e-92a9-4c4c-91e4-80b29144ae21 debug: AccountSASAuthenticator:validate() Retrieved signature from URL parameter sig: 234maeRdNNrJvnqnO4xR0hEZU1lNVbk+97PdLJX/nkE=
+2025-11-17T04:27:25.980Z e23ba54e-92a9-4c4c-91e4-80b29144ae21 info: AccountSASAuthenticator:validate() Failed to get valid account SAS values from request.
+2025-11-17T04:27:25.980Z e23ba54e-92a9-4c4c-91e4-80b29144ae21 info: BlobSASAuthenticator:validate() Start validation against blob service Shared Access Signature pattern.
+2025-11-17T04:27:25.980Z e23ba54e-92a9-4c4c-91e4-80b29144ae21 debug: BlobSASAuthenticator:validate() Getting account properties...
+2025-11-17T04:27:25.980Z e23ba54e-92a9-4c4c-91e4-80b29144ae21 debug: BlobSASAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: quickstartblobs, blob: 17b43b4a-d0fd-42a3-bda4-708870117e8d_photo.jpg
+2025-11-17T04:27:25.980Z e23ba54e-92a9-4c4c-91e4-80b29144ae21 debug: BlobSASAuthenticator:validate() Got account properties successfully.
+2025-11-17T04:27:25.980Z e23ba54e-92a9-4c4c-91e4-80b29144ae21 debug: BlobSASAuthenticator:validate() Retrieved signature from URL parameter sig: 234maeRdNNrJvnqnO4xR0hEZU1lNVbk+97PdLJX/nkE=
+2025-11-17T04:27:25.980Z e23ba54e-92a9-4c4c-91e4-80b29144ae21 debug: BlobSASAuthenticator:validate() Signed resource type is c.
+2025-11-17T04:27:25.980Z e23ba54e-92a9-4c4c-91e4-80b29144ae21 debug: BlobSASAuthenticator:validate() Successfully got valid blob service SAS values from request. {"version":"2025-07-05","startTime":"2025-11-17T04:27:25Z","expiryTime":"2025-11-17T05:27:25Z","permissions":"r","containerName":"quickstartblobs","blobName":"17b43b4a-d0fd-42a3-bda4-708870117e8d_photo.jpg","signedResource":"c"}
+2025-11-17T04:27:25.980Z e23ba54e-92a9-4c4c-91e4-80b29144ae21 info: BlobSASAuthenticator:validate() Validate signature based account key1.
+2025-11-17T04:27:25.980Z e23ba54e-92a9-4c4c-91e4-80b29144ae21 debug: BlobSASAuthenticator:validate() String to sign is: "r\n2025-11-17T04:27:25Z\n2025-11-17T05:27:25Z\n/blob/devstoreaccount1/quickstartblobs\n\n\n\n2025-07-05\nc\n\n\n\n\n\n\n"
+2025-11-17T04:27:25.980Z e23ba54e-92a9-4c4c-91e4-80b29144ae21 debug: BlobSASAuthenticator:validate() Calculated signature is: 234maeRdNNrJvnqnO4xR0hEZU1lNVbk+97PdLJX/nkE=
+2025-11-17T04:27:25.980Z e23ba54e-92a9-4c4c-91e4-80b29144ae21 info: BlobSASAuthenticator:validate() Signature based on key1 validation passed.
+2025-11-17T04:27:25.980Z e23ba54e-92a9-4c4c-91e4-80b29144ae21 info: BlobSASAuthenticator:validate() Validate start and expiry time.
+2025-11-17T04:27:25.980Z e23ba54e-92a9-4c4c-91e4-80b29144ae21 info: BlobSASAuthenticator:validate() Validate IP range.
+2025-11-17T04:27:25.980Z e23ba54e-92a9-4c4c-91e4-80b29144ae21 info: BlobSASAuthenticator:validate() Validate request protocol.
+2025-11-17T04:27:25.980Z e23ba54e-92a9-4c4c-91e4-80b29144ae21 debug: BlobSASAuthenticator:validate() Got permission requirements for operation Blob_Download - {"permission":"r"}
+2025-11-17T04:27:25.980Z e23ba54e-92a9-4c4c-91e4-80b29144ae21 info: BlobSASAuthenticator:validate() Blob service SAS validation successfully.
+2025-11-17T04:27:25.981Z e23ba54e-92a9-4c4c-91e4-80b29144ae21 verbose: DeserializerMiddleware: Start deserializing...
+2025-11-17T04:27:25.981Z e23ba54e-92a9-4c4c-91e4-80b29144ae21 info: HandlerMiddleware: DeserializedParameters={"options":{"leaseAccessConditions":{},"cpkInfo":{},"modifiedAccessConditions":{}}}
+2025-11-17T04:27:25.981Z e23ba54e-92a9-4c4c-91e4-80b29144ae21 info: BlobHandler:downloadBlockBlobOrAppendBlob() NormalizedDownloadRange=bytes=0-1767941 RequiredContentLength=1767942
+2025-11-17T04:27:25.981Z e23ba54e-92a9-4c4c-91e4-80b29144ae21 debug: OperationQueue.operate() Schedule incoming job c159a4a4-b416-4a8f-9b3a-ad727119d1c2
+2025-11-17T04:27:25.981Z e23ba54e-92a9-4c4c-91e4-80b29144ae21 debug: OperationQueue:execute() Current runningConcurrency:0 maxConcurrency:100 operations.length:1
+2025-11-17T04:27:25.981Z e23ba54e-92a9-4c4c-91e4-80b29144ae21 verbose: FSExtentStore:readExtent() Creating read stream. LocationId:Default extentId:60a870cd-5823-4e4f-b612-ae48104ffbd3 path:/data/__blobstorage__/60a870cd-5823-4e4f-b612-ae48104ffbd3 offset:7803881 count:1767942 end:9571822
+2025-11-17T04:27:25.982Z e23ba54e-92a9-4c4c-91e4-80b29144ae21 debug: OperationQueue.operate() Job c159a4a4-b416-4a8f-9b3a-ad727119d1c2 completes callback, resolve.
+2025-11-17T04:27:25.982Z e23ba54e-92a9-4c4c-91e4-80b29144ae21 verbose: SerializerMiddleware: Start serializing...
+2025-11-17T04:27:25.982Z e23ba54e-92a9-4c4c-91e4-80b29144ae21 info: Serializer: Start returning stream body.
+2025-11-17T04:27:25.982Z e23ba54e-92a9-4c4c-91e4-80b29144ae21 debug: OperationQueue:execute() Current runningConcurrency:0 maxConcurrency:100 operations.length:0
+2025-11-17T04:27:25.982Z e23ba54e-92a9-4c4c-91e4-80b29144ae21 debug: OperationQueue:execute() return. Operation.length === 0
+2025-11-17T04:27:26.020Z e23ba54e-92a9-4c4c-91e4-80b29144ae21 verbose: Send Blob telemetry: B_Blob_Download
+2025-11-17T04:27:26.020Z e23ba54e-92a9-4c4c-91e4-80b29144ae21 info: EndMiddleware: End response. TotalTimeInMS=41 StatusCode=200 StatusMessage=OK Headers={"server":"Azurite-Blob/3.35.0","last-modified":"Sun, 16 Nov 2025 21:35:43 GMT","x-ms-creation-time":"Sun, 16 Nov 2025 21:35:43 GMT","content-length":"1767942","content-type":"application/octet-stream","etag":"\"0x1C03EAF648FCB80\"","content-md5":"1Ehr4odyVUIjCiHY2iOxIQ==","x-ms-blob-type":"BlockBlob","x-ms-lease-state":"available","x-ms-lease-status":"unlocked","x-ms-request-id":"e23ba54e-92a9-4c4c-91e4-80b29144ae21","x-ms-version":"2025-11-05","accept-ranges":"bytes","date":"Mon, 17 Nov 2025 04:27:25 GMT","x-ms-server-encrypted":"true","x-ms-blob-content-md5":"1Ehr4odyVUIjCiHY2iOxIQ=="}
+2025-11-17T04:27:26.020Z e23ba54e-92a9-4c4c-91e4-80b29144ae21 verbose: FSExtentStore:readExtent() Read stream closed. LocationId:Default extentId:60a870cd-5823-4e4f-b612-ae48104ffbd3 path:/data/__blobstorage__/60a870cd-5823-4e4f-b612-ae48104ffbd3 offset:7803881 count:1767942 end:9571822
+2025-11-17T04:28:22.025Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2025-11-17T04:28:22.026Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2025-11-17T04:28:22.228Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2025-11-17T04:28:22.228Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2025-11-17T04:28:22.448Z 	 info: QueueGCManager:markSweepLoop() Start new mark and sweep.
+2025-11-17T04:28:22.448Z 	 info: QueueGCManger:markSweep() Get all extents.
+2025-11-17T04:28:22.449Z 	 info: QueueGCManager:marksweep() Get 0 extents.
+2025-11-17T04:28:22.449Z 	 info: QueueGCManager:markSweep() Get referred extents, then remove from allExtents.
+2025-11-17T04:28:22.449Z 	 info: QueueGCManager:markSweep() Got referred extents, unreferenced extents count is 0.
+2025-11-17T04:28:22.449Z 	 info: QueueGCManager:markSweepLoop() Mark and sweep finished, take 1ms.
+2025-11-17T04:28:22.449Z 	 info: QueueGCManager:markSweepLoop() Sleep for 60000
+2025-11-17T04:28:22.450Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2025-11-17T04:28:22.450Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
