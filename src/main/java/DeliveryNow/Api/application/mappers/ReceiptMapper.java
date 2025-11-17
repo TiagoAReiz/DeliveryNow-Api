@@ -8,13 +8,14 @@ import org.springframework.stereotype.Component;
 @Component
 public class ReceiptMapper {
     public static ReceiptResponse toResponse(Receipt receipt) {
-        return new ReceiptResponse(receipt.getId(),receipt.getImageUrl().replace("http://127.0.0.1", "http://192.168.15.11"));
+        return new ReceiptResponse(receipt.getId(),receipt.getImageUrl().replace("http://azurite", "http://192.168.15.11" +
+                ""));
     }
     public static JpaReceipt toJpa(Receipt receipt) {
-        return new JpaReceipt(receipt.getId(), receipt.getImageUrl(),receipt.getDeliveryId());
+        return new JpaReceipt(receipt.getId(), receipt.getImageUrl(),receipt.getDeliveryId(), receipt.getCreatedAt(),receipt.getUpdatedAt(),receipt.getDeletedAt());
     }
     public static Receipt toDomain(JpaReceipt receipt) {
-        return new Receipt(receipt.getId(),receipt.getImageUrl(),receipt.getDeliveryId());
+        return new Receipt(receipt.getId(),receipt.getImageUrl(),receipt.getDeliveryId(), receipt.getCreatedAt(),receipt.getUpdatedAt(),receipt.getDeletedAt());
     }
 
 }

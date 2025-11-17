@@ -5,6 +5,8 @@ import DeliveryNow.Api.application.services.dtos.LoginResponse;
 import DeliveryNow.Api.application.services.dtos.UserEntityRequest;
 import DeliveryNow.Api.application.services.dtos.UserEntityResponse;
 import DeliveryNow.Api.application.useCases.UserEntityUseCases;
+import jakarta.validation.Valid;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,11 +21,25 @@ public class UserEntityController {
         this.userEntityUseCases = userEntityUseCases;
     }
     @PostMapping("/register")
-    public ResponseEntity<UserEntityResponse> createUser(@RequestBody UserEntityRequest user) {
-        return ResponseEntity.ok(userEntityUseCases.createUser(user));
+    public ResponseEntity<UserEntityResponse> createUser(@Valid  @RequestBody UserEntityRequest user) {
+        try {
+            UserEntityResponse userCreated = userEntityUseCases.createUser(user);
+            return ResponseEntity.ok(userCreated);
+        }catch (Exception ex){
+            return ResponseEntity.status(HttpStatus.CONFLICT).build();
+        }
+
     }
     @PostMapping("/login")
-    public ResponseEntity<LoginResponse> login(@RequestBody LoginRequest loginRequest) {
-        return ResponseEntity.ok(userEntityUseCases.login(loginRequest));
+    public ResponseEntity<LoginResponse> login( @Valid @RequestBody LoginRequest loginRequest) {
+        try{
+            LoginResponse loginResponse = userEntityUseCases.login(loginRequest);
+            return ResponseEntity.ok(loginResponse);
+        }catch (Exception ex){
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+        }
+
+
+
     }
 }

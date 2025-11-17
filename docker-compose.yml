@@ -15,6 +15,8 @@ services:
       --tableHost 0.0.0.0
       --location /data
       --debug /data/debug.log
+    networks:
+      - app-network
 
   postgres:
     image: postgres:16
@@ -33,11 +35,62 @@ services:
       timeout: 5s
       retries: 5
     networks:
-      - postgres-net
+      - app-network
+
+  deliverynow-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: deliverynow-api
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+      - "8080:8080"
+    environment:
+      # Database (override for container network)
+      DB_HOST: postgres
+      DB_PORT: 5432
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      
+      # JPA/Hibernate
+      HIBERNATE_DDL_AUTO: ${HIBERNATE_DDL_AUTO}
+      HIBERNATE_SHOW_SQL: ${HIBERNATE_SHOW_SQL}
+      HIBERNATE_FORMAT_SQL: ${HIBERNATE_FORMAT_SQL}
+      
+      # Azure Storage (Azurite - override for container network)
+      STORAGE_ACCOUNT_NAME: ${STORAGE_ACCOUNT_NAME}
+      STORAGE_ACCOUNT_KEY: ${STORAGE_ACCOUNT_KEY}
+      STORAGE_BLOB_ENDPOINT: http://azurite:10000/devstoreaccount1
+      
+      # Security
+      APP_SECRET_KEY: ${APP_SECRET_KEY}
+      
+      # File Upload
+      MAX_FILE_SIZE: ${MAX_FILE_SIZE}
+      MAX_REQUEST_SIZE: ${MAX_REQUEST_SIZE}
+      
+      # JVM Options
+      JAVA_OPTS: ${JAVA_OPTS}
+    depends_on:
+      postgres:
+        condition: service_healthy
+      azurite:
+        condition: service_started
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8080/actuator/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+    networks:
+      - app-network
 
 volumes:
   postgres-data:
 
 networks:
-  postgres-net:
+  app-network:
     driver: bridge

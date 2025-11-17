@@ -1,6 +1,9 @@
 package DeliveryNow.Api.application.services.dtos;
 
 import DeliveryNow.Api.domain.entities.enums.DeliveryStatus;
+import DeliveryNow.Api.domain.entities.valueObjects.Address;
 
-public record DeliveryRequest(String name, String address, DeliveryStatus status, Long userId) {
+import java.time.LocalDate;
+
+public record DeliveryRequest(String name, Address address, DeliveryStatus status, Long userId, LocalDate expectedDeliveryDate) {
 }
