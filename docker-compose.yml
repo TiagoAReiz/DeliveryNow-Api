@@ -93,4 +93,5 @@ volumes:
 
 networks:
   app-network:
+    name: deliverynow-network
     driver: bridge
