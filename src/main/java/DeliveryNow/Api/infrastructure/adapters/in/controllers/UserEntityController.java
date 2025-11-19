@@ -25,8 +25,12 @@ public class UserEntityController {
         try {
             UserEntityResponse userCreated = userEntityUseCases.createUser(user);
             return ResponseEntity.ok(userCreated);
-        }catch (Exception ex){
+        } catch (IllegalStateException ex) {
+            // Usuário já existe
             return ResponseEntity.status(HttpStatus.CONFLICT).build();
+        } catch (Exception ex) {
+            // Outros erros
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
 
     }
