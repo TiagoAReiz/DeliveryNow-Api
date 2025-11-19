@@ -12,7 +12,6 @@ import DeliveryNow.Api.infrastructure.adapters.out.repositories.userEntity.JpaUs
 import DeliveryNow.Api.infrastructure.config.jwt.TokenService;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -32,8 +31,8 @@ public class UserEntityService implements UserEntityUseCases {
 
     @Override
     public UserEntityResponse createUser(UserEntityRequest user) {
-        UserEntity userDb = UserEntityMapper.toUserEntity(userEntityRepository.getUserEntityByEmail(user.email()));
-        if (userDb != null) {
+        JpaUserEntity existingUser = userEntityRepository.getUserEntityByEmail(user.email());
+        if (existingUser != null) {
             throw new IllegalStateException("Um usuário com o e-mail '" + user.email() + "' já existe.");
         }
         UserEntity userEntity = UserEntityMapper.toUserEntity(user);
