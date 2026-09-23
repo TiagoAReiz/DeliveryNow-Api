@@ -1,0 +1,96 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: Build & test (./mvnw verify)
+    runs-on: ubuntu-latest
+
+    # The Spring context test needs a real PostgreSQL and an Azure Blob endpoint (Azurite).
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: deliverynow
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+      azurite:
+        image: mcr.microsoft.com/azure-storage/azurite
+        ports:
+          - 10000:10000
+
+    env:
+      DB_HOST: localhost
+      DB_PORT: 5432
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: deliverynow
+      APP_SECRET_KEY: ci-only-secret
+      # Azurite's publicly documented development account (not a real secret)
+      STORAGE_ACCOUNT_NAME: devstoreaccount1
+      STORAGE_ACCOUNT_KEY: Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==
+      STORAGE_BLOB_ENDPOINT: http://127.0.0.1:10000/devstoreaccount1
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: maven
+
+      - name: Verify
+        run: ./mvnw -B verify
+
+      - name: Upload test reports
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: surefire-reports
+          path: target/surefire-reports
+
+  compose-smoke:
+    name: Docker Compose quickstart
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Start stack exactly as the README says
+        run: |
+          cp .env.example .env
+          docker compose up -d --build --wait --wait-timeout 300
+
+      - name: Health check
+        run: curl -fsS http://localhost:8080/actuator/health
+
+      - name: Register + login smoke test
+        run: |
+          curl -fsS -H 'Content-Type: application/json' \
+            -d '{"email":"ci@deliverynow.dev","firstName":"CI","lastName":"Bot","password":"ci-pass"}' \
+            http://localhost:8080/register
+          curl -fsS -H 'Content-Type: application/json' \
+            -d '{"email":"ci@deliverynow.dev","password":"ci-pass"}' \
+            http://localhost:8080/login | grep -q '"token"'
+
+      - name: Logs on failure
+        if: failure()
+        run: docker compose logs
+
+      - name: Tear down
+        if: always()
+        run: docker compose down -v

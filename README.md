@@ -1,6 +1,10 @@
 # DeliveryNow API
 
+[![CI](https://github.com/TiagoAReiz/DeliveryNow-Api/actions/workflows/ci.yml/badge.svg)](https://github.com/TiagoAReiz/DeliveryNow-Api/actions/workflows/ci.yml)
+
 API REST para gerenciamento de entregas, desenvolvida em **Java + Spring Boot**, seguindo princípios de **Arquitetura Hexagonal (Ports & Adapters)**. Permite o cadastro de usuários, criação e acompanhamento de entregas, além do envio de comprovantes (fotos) armazenados em um blob storage compatível com Azure.
+
+> **App mobile:** esta API é consumida pelo aplicativo do entregador [DeliveryNow-Mobile](https://github.com/TiagoAReiz/DeliveryNow-Mobile) (Expo / React Native), que faz login, lista e busca entregas e envia fotos de comprovante.
 
 ## Sumário
 
@@ -9,6 +13,7 @@ API REST para gerenciamento de entregas, desenvolvida em **Java + Spring Boot**,
 - [Funcionalidades](#funcionalidades)
 - [Endpoints da API](#endpoints-da-api)
 - [Como executar](#como-executar)
+- [Testes](#testes)
 - [Variáveis de ambiente](#variáveis-de-ambiente)
 - [Estrutura do projeto](#estrutura-do-projeto)
 
@@ -123,7 +128,20 @@ O domínio não depende de Spring, JPA ou Azure — essas dependências ficam is
    docker compose up --build
    ```
 
-4. A API estará disponível em `http://localhost:8080`.
+4. A API estará disponível em `http://localhost:8080`. Para conferir se subiu:
+   ```bash
+   curl http://localhost:8080/actuator/health   # {"status":"UP"}
+   ```
+
+5. Teste rápido do fluxo (cadastro → login → rota protegida):
+   ```bash
+   curl -X POST http://localhost:8080/register -H 'Content-Type: application/json'      -d '{"email":"demo@deliverynow.dev","firstName":"Demo","lastName":"User","password":"demo123"}'
+
+   curl -X POST http://localhost:8080/login -H 'Content-Type: application/json'      -d '{"email":"demo@deliverynow.dev","password":"demo123"}'
+   # => {"token":"<jwt>","id":1}
+
+   curl http://localhost:8080/delivery -H 'Authorization: Bearer <jwt>'
+   ```
 
 | Serviço | Porta |
 |---|---|
@@ -132,6 +150,8 @@ O domínio não depende de Spring, JPA ou Azure — essas dependências ficam is
 | Azurite — Blob | 10000 |
 | Azurite — Queue | 10001 |
 | Azurite — Table | 10002 |
+
+> **Azurite:** o `.env.example` já vem com a conta de desenvolvimento pública do Azurite (`devstoreaccount1` e sua chave [documentada pela Microsoft](https://learn.microsoft.com/azure/storage/common/storage-use-azurite#well-known-storage-account-and-key)). A chave precisa ser Base64 válido — se for trocada por um valor qualquer a API não inicia. Os dados do Azurite ficam no volume Docker `azurite-data` (fora do repositório).
 
 > **Importante:** o arquivo `.env` nunca deve ser commitado. Use sempre `.env.example` como referência e mantenha suas credenciais locais fora do controle de versão.
 
@@ -142,6 +162,32 @@ Com um PostgreSQL disponível (e as variáveis de ambiente configuradas), é pos
 ```bash
 ./mvnw spring-boot:run
 ```
+
+Também é necessário um endpoint de Blob Storage. A forma mais simples é subir só o Azurite e o Postgres pelo Compose:
+
+```bash
+docker compose up -d postgres azurite
+```
+
+## Testes
+
+```bash
+./mvnw verify
+```
+
+A suíte cobre:
+
+| Teste | O que valida |
+|---|---|
+| `TokenServiceTest` | Geração/validação de JWT, rejeição de token expirado, de outro emissor ou assinado com outra chave |
+| `UserEntityServiceTest` | Senha salva com hash BCrypt, bloqueio de e-mail duplicado, login retornando token + id |
+| `ReceiptServiceTest` | Upload da imagem e persistência do blob, geração de URLs assinadas (SAS) na listagem |
+| `DeliveryRepositoryImplTest` | Regra de negócio `PENDING` → `LATE` após a data prevista, atualização parcial, filtros de busca |
+| `UserEntityControllerTest` | `/register` e `/login` públicos, `409` para e-mail duplicado, `401` para credenciais inválidas |
+| `DeliveryControllerTest` | Cadeia real de segurança (JWT): `403` sem token ou com token inválido, `404`, filtros de busca |
+| `DeliveryNowApplicationTests` | Sobe o contexto completo do Spring (requer PostgreSQL e Azurite em execução) |
+
+No GitHub Actions ([`ci.yml`](.github/workflows/ci.yml)) o `./mvnw verify` roda com PostgreSQL e Azurite como *service containers*, e um segundo job sobe o `docker compose` exatamente como descrito acima e faz um smoke test de health, cadastro e login.
 
 ## Variáveis de ambiente
 
@@ -168,7 +214,8 @@ DeliveryNow-Api/
 │   │   │   └── infrastructure/    # Controllers, repositórios JPA, Azure, security config
 │   │   └── resources/
 │   │       └── application.properties
-│   └── test/
+│   └── test/               # Testes unitários, de controller (MockMvc) e de contexto
+├── .github/workflows/   # CI (build, testes e smoke test do docker compose)
 ├── docker-compose.yml   # Orquestra API, PostgreSQL e Azurite
 ├── Dockerfile            # Build multi-stage (Maven -> JRE Alpine)
 ├── .env.example          # Template de variáveis de ambiente
