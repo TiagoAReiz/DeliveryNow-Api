@@ -34,3 +34,11 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Local runtime data (never commit) ###
+# Azurite blob/queue/table storage and debug logs
+data-azurite/
+*.log
+# Files uploaded during local testing
+Upload/
+uploads/
