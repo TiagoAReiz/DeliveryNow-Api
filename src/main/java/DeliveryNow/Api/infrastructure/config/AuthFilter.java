@@ -31,10 +31,14 @@ public class AuthFilter extends OncePerRequestFilter {
         var token = this.recoverToken(request);
         if (token != null) {
             var email = tokenService.validateToken(token);
-            UserDetails user = userRepository.getUserEntityByEmail(email);
+            UserDetails user = (email == null || email.isBlank()) ? null : userRepository.getUserEntityByEmail(email);
 
-            var authentication = new UsernamePasswordAuthenticationToken(user, null, user.getAuthorities());
-            SecurityContextHolder.getContext().setAuthentication(authentication);
+            // Invalid/expired token or unknown user: leave the request unauthenticated
+            // so Spring Security answers 403 instead of failing with a NullPointerException (500).
+            if (user != null) {
+                var authentication = new UsernamePasswordAuthenticationToken(user, null, user.getAuthorities());
+                SecurityContextHolder.getContext().setAuthentication(authentication);
+            }
         }
         filterChain.doFilter(request, response);
     }
